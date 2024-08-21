@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "outDir": "dist",
+    "declarationMap": true,
+    "useDefineForClassFields": false
+  },
+  "include": [ "src/*.ts" ]
+}

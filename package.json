@@ -1,0 +1,48 @@
+{
+  "name": "apption",
+  "version": "1.0.1",
+  "description": "A simple library for creating modern interactive applications",
+  "main": "dist/apption.js",
+  "files": [
+    "dist/*"
+  ],
+  "type": "module",
+  "types": "./dist/apption.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/apption.js"
+    }
+  },
+  "scripts": {
+    "test": "node --test",
+    "doc": "npx typedoc --plugin typedoc-plugin-markdown --out ./docs/api ./src/*.ts",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mksunny1/apption.git"
+  },
+  "keywords": [
+    "apption",
+    "action",
+    "JavaScript",
+    "TypeScript",
+    "object",
+    "array",
+    "composable",
+    "meta-programming",
+    "reactivity",
+    "application"
+  ],
+  "author": "Mark Sun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mksunny1/apption/issues"
+  },
+  "homepage": "https://github.com/mksunny1/apption#readme",
+  "devDependencies": {
+    "typedoc": "^0.26.1",
+    "typedoc-plugin-markdown": "^4.1.0",
+    "typescript": "^5.5.2"
+  }
+}
