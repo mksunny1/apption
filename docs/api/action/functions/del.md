@@ -32,4 +32,4 @@ console.log(obj2);    // { a: 1, c: 3}
 
 ## Defined in
 
-action.ts:200
+[action.ts:200](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L200)

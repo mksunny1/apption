@@ -22,4 +22,4 @@ Represents any function
 
 ## Defined in
 
-action.ts:11
+[action.ts:11](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L11)

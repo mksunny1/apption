@@ -40,7 +40,7 @@ console.log(count);   // 25
 
 #### Defined in
 
-action.ts:88
+[action.ts:88](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L88)
 
 ## Properties
 
@@ -50,4 +50,4 @@ action.ts:88
 
 #### Defined in
 
-action.ts:87
+[action.ts:87](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L87)

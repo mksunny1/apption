@@ -1,169 +1,52 @@
-[**apption**](../README.md) • **Docs**
+**apption** • [**Docs**](modules.md)
 
 ***
 
-[apption](../modules.md) / apption
+# Apption
 
-# apption
+This is a simple library for creating frontend applications. It exports a few primitives for succinctly expressing many common operations in pure JavaScript. It works very well with modern app architectures based on components. The library encourages application code 
+which are flexible, clean, well structured, fast, memory-efficient, easy to understand and easy to maintain. This is also a tiny library with minimal load-time overhead. It is an improvement on the earlier Class-Action suite of libraries; therefore it replaces them in [deleight](https://github.com/mksunny1/deleight). Anyone still interested in any of those libraries can find them [here](https://github.com/mksunny1/).
 
-## References
+## Installation
 
-### Action
+`npm i apption`
 
-Re-exports [Action](../action/classes/Action.md)
+## Usage
 
-***
+```js
+import { call, ArrayActions, ChildrenActions } from 'apption';
 
-### ArrayActions
+const array = [];
+const tbody = document.querySelector('tbody'), row = document.querySelector('template').content.firstElementChild;
+const rowId = row.querySelector('td'), rowlbl = row.querySelector('a');
 
-Re-exports [ArrayActions](../array/classes/ArrayActions.md)
+const AppChildrenActions = class extends ChildrenActions {
+    render(item) {
+        rowId.firstChild.nodeValue = item.id;
+        rowlbl.firstChild.nodeValue = item.lb;
+        return row.cloneNode(true);
+    } update(value = ' !!!') {
+        for (let i = 0; i < array.length; i += 10) 
+            this.element.children[i].querySelector('a').firstChild.nodeValue = array[i].lbl += value;
+    }
+}, actions = [new ArrayActions(array), new AppChildrenActions(tbody)];
 
-***
+call({ push: actions }, { id: 1, lbl: 'First item }, { id: 2, lbl: 'Second item } );
 
-### CallAction
+```
 
-Re-exports [CallAction](../action/classes/CallAction.md)
+## Documentation
 
-***
+This library exports a single class with a very simple API which can be picked up in a few minutes [here](_media/README.md).
 
-### ChildrenActions
+## Contributing
 
-Re-exports [ChildrenActions](../array/classes/ChildrenActions.md)
+Help improve Apption by contributing to this project. You can contribute in many ways. See the [contributing guidelines](_media/CONTRIBUTING.md). You can also show your support by sponsoring us.
 
-***
+[![](https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=S2ZW3RJSDHASW)
 
-### DelAction
+Thank you for contributing.
 
-Re-exports [DelAction](../action/classes/DelAction.md)
+## Sponsors
 
-***
-
-### IAction
-
-Re-exports [IAction](../action/interfaces/IAction.md)
-
-***
-
-### IActionMap
-
-Re-exports [IActionMap](../action/type-aliases/IActionMap.md)
-
-***
-
-### IActionMapObject
-
-Re-exports [IActionMapObject](../action/type-aliases/IActionMapObject.md)
-
-***
-
-### ICallable
-
-Re-exports [ICallable](../action/interfaces/ICallable.md)
-
-***
-
-### IConcreteOperation
-
-Re-exports [IConcreteOperation](../action/type-aliases/IConcreteOperation.md)
-
-***
-
-### IKey
-
-Re-exports [IKey](../action/type-aliases/IKey.md)
-
-***
-
-### IMap
-
-Re-exports [IMap](../action/interfaces/IMap.md)
-
-***
-
-### IOperations
-
-Re-exports [IOperations](../action/type-aliases/IOperations.md)
-
-***
-
-### Lazy
-
-Re-exports [Lazy](../action/classes/Lazy.md)
-
-***
-
-### ObjectAction
-
-Re-exports [ObjectAction](../action/classes/ObjectAction.md)
-
-***
-
-### Result
-
-Re-exports [Result](../action/classes/Result.md)
-
-***
-
-### SetAction
-
-Re-exports [SetAction](../action/classes/SetAction.md)
-
-***
-
-### act
-
-Re-exports [act](../action/functions/act.md)
-
-***
-
-### call
-
-Re-exports [call](../action/functions/call.md)
-
-***
-
-### del
-
-Re-exports [del](../action/functions/del.md)
-
-***
-
-### foreach
-
-Re-exports [foreach](../object/functions/foreach.md)
-
-***
-
-### map
-
-Re-exports [map](../object/functions/map.md)
-
-***
-
-### mapKeys
-
-Re-exports [mapKeys](../object/functions/mapKeys.md)
-
-***
-
-### mapValues
-
-Re-exports [mapValues](../object/functions/mapValues.md)
-
-***
-
-### reduce
-
-Re-exports [reduce](../object/functions/reduce.md)
-
-***
-
-### set
-
-Re-exports [set](../action/functions/set.md)
-
-***
-
-### zip
-
-Re-exports [zip](../object/functions/zip.md)
+...

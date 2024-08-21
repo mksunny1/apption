@@ -31,4 +31,4 @@ console.log(count)    // 14
 
 ## Defined in
 
-object.ts:119
+[object.ts:119](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/object.ts#L119)

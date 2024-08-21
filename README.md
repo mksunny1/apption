@@ -35,7 +35,7 @@ call({ push: actions }, { id: 1, lbl: 'First item }, { id: 2, lbl: 'Second item 
 
 ## Documentation
 
-This library exports a single class with a very simple API which can be picked up in a few minutes [here](./docs/api/apption/README.md).
+This library exports a single class with a very simple API which can be picked up in a few minutes [here](./docs/api/README.md).
 
 
 ## Contributing

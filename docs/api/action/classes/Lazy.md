@@ -40,7 +40,7 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-action.ts:36
+[action.ts:36](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L36)
 
 ## Properties
 
@@ -50,7 +50,7 @@ action.ts:36
 
 #### Defined in
 
-action.ts:35
+[action.ts:35](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L35)
 
 ## Methods
 
@@ -68,4 +68,4 @@ action.ts:35
 
 #### Defined in
 
-action.ts:39
+[action.ts:39](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L39)
