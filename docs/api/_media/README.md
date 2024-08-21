@@ -43,8 +43,6 @@ This library exports a single class with a very simple API which can be picked u
 
 Help improve Apption by contributing to this project. You can contribute in many ways. See the [contributing guidelines](_media/CONTRIBUTING.md). You can also show your support by sponsoring us.
 
-[![](https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=S2ZW3RJSDHASW)
-
 Thank you for contributing.
 
 ## Sponsors

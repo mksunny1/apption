@@ -30,7 +30,7 @@ Base class for actions on objects
 
 #### Defined in
 
-[action.ts:242](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L242)
+[action.ts:242](https://github.com/mksunny1/apption/blob/4be4c2e759dafd6ec2dfcf726cc1a869f1970fb3/src/action.ts#L242)
 
 ## Properties
 
@@ -40,4 +40,4 @@ Base class for actions on objects
 
 #### Defined in
 
-[action.ts:241](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L241)
+[action.ts:241](https://github.com/mksunny1/apption/blob/4be4c2e759dafd6ec2dfcf726cc1a869f1970fb3/src/action.ts#L241)

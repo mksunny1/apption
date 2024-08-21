@@ -14,4 +14,4 @@ The values or the items in them may also be `Lazy` objects that return the expec
 
 ## Defined in
 
-[action.ts:67](https://github.com/mksunny1/apption/blob/3ee99bdc3f8bf611aaabe8c0754fffd6c005fdcc/src/action.ts#L67)
+[action.ts:67](https://github.com/mksunny1/apption/blob/4be4c2e759dafd6ec2dfcf726cc1a869f1970fb3/src/action.ts#L67)
