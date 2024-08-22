@@ -22,8 +22,8 @@ export class ArrayActions<T>{
     };
     push(...items: T[]) { return this.array.push(...items) };
     pop() { return this.array.pop() };
-    undhift(...items: T[]) { return this.array.unshift(...items) };
-    shift() { return this.array.pop() };
+    unshift(...items: T[]) { return this.array.unshift(...items) };
+    shift() { return this.array.shift() };
     splice(start: number, deleteCount?: number, ...items: T[]) { 
         if (start + deleteCount - 1 >= this.array.length) return;
         return this.array.splice(start, deleteCount, ...items) 

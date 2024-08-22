@@ -1,6 +1,6 @@
 {
   "name": "apption",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple library for creating modern interactive applications",
   "main": "dist/apption.js",
   "files": [
@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/mksunny1/apption#readme",
   "devDependencies": {
+    "jsdom": "^24.1.1",
     "typedoc": "^0.26.1",
     "typedoc-plugin-markdown": "^4.1.0",
     "typescript": "^5.5.2"

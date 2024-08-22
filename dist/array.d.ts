@@ -18,7 +18,7 @@ export declare class ArrayActions<T> {
     set(index: number, value: T): void;
     push(...items: T[]): number;
     pop(): T;
-    undhift(...items: T[]): number;
+    unshift(...items: T[]): number;
     shift(): T;
     splice(start: number, deleteCount?: number, ...items: T[]): T[];
     swap(from: number, to: number): [T, T];

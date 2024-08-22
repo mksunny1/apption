@@ -24,9 +24,9 @@ export class ArrayActions {
     ;
     pop() { return this.array.pop(); }
     ;
-    undhift(...items) { return this.array.unshift(...items); }
+    unshift(...items) { return this.array.unshift(...items); }
     ;
-    shift() { return this.array.pop(); }
+    shift() { return this.array.shift(); }
     ;
     splice(start, deleteCount, ...items) {
         if (start + deleteCount - 1 >= this.array.length)
