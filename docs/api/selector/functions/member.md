@@ -40,4 +40,4 @@ console.log(slct.div);  // I am a div
 
 ## Defined in
 
-selector.ts:118
+[selector.ts:118](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L118)

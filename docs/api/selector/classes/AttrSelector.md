@@ -35,7 +35,7 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-selector.ts:81
+[selector.ts:81](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L81)
 
 ## Properties
 
@@ -49,7 +49,7 @@ selector.ts:81
 
 #### Defined in
 
-selector.ts:80
+[selector.ts:80](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L80)
 
 ***
 
@@ -63,7 +63,7 @@ selector.ts:80
 
 #### Defined in
 
-selector.ts:25
+[selector.ts:25](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L25)
 
 ## Methods
 
@@ -85,7 +85,7 @@ selector.ts:25
 
 #### Defined in
 
-selector.ts:134
+[selector.ts:134](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L134)
 
 ***
 
@@ -107,7 +107,7 @@ selector.ts:134
 
 #### Defined in
 
-selector.ts:128
+[selector.ts:128](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L128)
 
 ***
 
@@ -131,4 +131,4 @@ selector.ts:128
 
 #### Defined in
 
-selector.ts:131
+[selector.ts:131](https://github.com/mksunny1/apption/blob/1770a08bd9b714c79b6dab283c2bf83182646040/src/selector.ts#L131)

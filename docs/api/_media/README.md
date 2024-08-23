@@ -31,7 +31,7 @@ const AppChildrenActions = class extends ChildrenActions {
     }
 }, actions = [new ArrayActions(array), new AppChildrenActions(tbody)];
 
-call({ push: actions }, { id: 1, lbl: 'First item }, { id: 2, lbl: 'Second item } );
+call({ push: actions }, { id: 1, lbl: 'First item' }, { id: 2, lbl: 'Second item' } );
 
 ```
 
