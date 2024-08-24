@@ -25,9 +25,6 @@ const AppChildrenActions = class extends ChildrenActions {
         rowId.firstChild.nodeValue = item.id;
         rowlbl.firstChild.nodeValue = item.lb;
         return row.cloneNode(true);
-    } update(value = ' !!!') {
-        for (let i = 0; i < array.length; i += 10) 
-            this.element.children[i].querySelector('a').firstChild.nodeValue = array[i].lbl += value;
     }
 }, actions = [new ArrayActions(array), new AppChildrenActions(tbody)];
 

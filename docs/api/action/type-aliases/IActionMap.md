@@ -12,4 +12,4 @@ An [IActionMapObject](IActionMapObject.md) or a [Lazy](../classes/Lazy.md) that 
 
 ## Defined in
 
-[action.ts:75](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L75)
+[action.ts:75](https://github.com/mksunny1/apption/blob/b06f059586e3c06c29fccfd5bd8250a5c5e800b1/src/action.ts#L75)
