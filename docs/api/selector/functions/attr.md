@@ -40,4 +40,4 @@ console.log(slct.p);  // main
 
 ## Defined in
 
-[selector.ts:206](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/selector.ts#L206)
+[selector.ts:208](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L208)

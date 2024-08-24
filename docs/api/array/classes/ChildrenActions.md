@@ -46,7 +46,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:130](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L130)
+[array.ts:132](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L132)
 
 ## Properties
 
@@ -56,7 +56,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:67](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L67)
+[array.ts:69](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L69)
 
 ## Methods
 
@@ -70,7 +70,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:127](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L127)
+[array.ts:129](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L129)
 
 ***
 
@@ -90,7 +90,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:118](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L118)
+[array.ts:120](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L120)
 
 ***
 
@@ -104,7 +104,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:78](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L78)
+[array.ts:80](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L80)
 
 ***
 
@@ -122,7 +122,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:75](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L75)
+[array.ts:77](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L77)
 
 ***
 
@@ -140,7 +140,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:68](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L68)
+[array.ts:70](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L70)
 
 ***
 
@@ -160,7 +160,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:71](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L71)
+[array.ts:73](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L73)
 
 ***
 
@@ -174,7 +174,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:87](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L87)
+[array.ts:89](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L89)
 
 ***
 
@@ -196,7 +196,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:90](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L90)
+[array.ts:92](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L92)
 
 ***
 
@@ -216,7 +216,7 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:100](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L100)
+[array.ts:102](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L102)
 
 ***
 
@@ -234,4 +234,4 @@ call({ swap: actions }, 1, 998);  // swap item 1 with item 998
 
 #### Defined in
 
-[array.ts:81](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L81)
+[array.ts:83](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L83)

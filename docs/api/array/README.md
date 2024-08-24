@@ -6,6 +6,8 @@
 
 # array
 
+Array types to work with {link actinn}
+
 ## Index
 
 ### Classes

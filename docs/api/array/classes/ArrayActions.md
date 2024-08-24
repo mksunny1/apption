@@ -39,7 +39,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:42](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L42)
+[array.ts:44](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L44)
 
 ## Properties
 
@@ -49,7 +49,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:18](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L18)
+[array.ts:20](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L20)
 
 ## Methods
 
@@ -63,7 +63,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:39](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L39)
+[array.ts:41](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L41)
 
 ***
 
@@ -83,7 +83,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:35](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L35)
+[array.ts:37](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L37)
 
 ***
 
@@ -97,7 +97,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:24](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L24)
+[array.ts:26](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L26)
 
 ***
 
@@ -115,7 +115,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:23](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L23)
+[array.ts:25](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L25)
 
 ***
 
@@ -135,7 +135,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:19](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L19)
+[array.ts:21](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L21)
 
 ***
 
@@ -149,7 +149,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:26](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L26)
+[array.ts:28](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L28)
 
 ***
 
@@ -171,7 +171,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:27](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L27)
+[array.ts:29](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L29)
 
 ***
 
@@ -191,7 +191,7 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:31](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L31)
+[array.ts:33](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L33)
 
 ***
 
@@ -209,4 +209,4 @@ console.log(array.length);   // 3
 
 #### Defined in
 
-[array.ts:25](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/array.ts#L25)
+[array.ts:27](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/array.ts#L27)

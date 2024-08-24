@@ -6,6 +6,8 @@
 
 # object
 
+Primitives for functionally creating and manipulating objects.
+
 ## Index
 
 ### Functions

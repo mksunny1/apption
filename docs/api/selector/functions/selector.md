@@ -41,4 +41,4 @@ console.log(slct.article.textContent);  // I am an article
 
 ## Defined in
 
-[selector.ts:85](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/selector.ts#L85)
+[selector.ts:87](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L87)

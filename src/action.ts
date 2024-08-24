@@ -1,5 +1,7 @@
 /**
  * General app actions.
+ * 
+ * @module
  */
 
 export type IKey = string | number | symbol;

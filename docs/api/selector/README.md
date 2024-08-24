@@ -6,6 +6,8 @@
 
 # selector
 
+Objects that select and manipulate elements when their properties or methods are accessed
+
 ## Index
 
 ### Classes

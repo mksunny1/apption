@@ -13,4 +13,4 @@ May also be an instance of `Lazy` which resolves to the aforementioned.
 
 ## Defined in
 
-[action.ts:56](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L56)
+[action.ts:58](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L58)

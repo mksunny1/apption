@@ -1,5 +1,7 @@
 /**
- * functionality related to objects.
+ * Primitives for functionally creating and manipulating objects.
+ * 
+ * @module
  */
 
 import { ICallable, IKey } from "./action";

@@ -6,6 +6,8 @@
 
 # action
 
+General app actions.
+
 ## Index
 
 ### Classes

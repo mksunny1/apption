@@ -43,7 +43,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:246](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L246)
+[action.ts:248](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L248)
 
 ## Properties
 
@@ -53,7 +53,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:245](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L245)
+[action.ts:247](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L247)
 
 ## Methods
 
@@ -75,4 +75,4 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:249](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L249)
+[action.ts:251](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L251)

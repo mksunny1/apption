@@ -41,7 +41,7 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:37](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L37)
+[action.ts:39](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L39)
 
 ## Properties
 
@@ -51,7 +51,7 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:36](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L36)
+[action.ts:38](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L38)
 
 ## Methods
 
@@ -69,4 +69,4 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:40](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L40)
+[action.ts:42](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L42)

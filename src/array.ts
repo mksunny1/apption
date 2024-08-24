@@ -1,5 +1,7 @@
 /**
- * functionality related to arrays.
+ * Array types to work with {link actinn}
+ * 
+ * @module
  */
 
 /**
