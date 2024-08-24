@@ -32,4 +32,4 @@ console.log(r)   // 14
 
 ## Defined in
 
-[object.ts:103](https://github.com/mksunny1/apption/blob/b06f059586e3c06c29fccfd5bd8250a5c5e800b1/src/object.ts#L103)
+[object.ts:103](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/object.ts#L103)

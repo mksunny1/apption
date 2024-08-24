@@ -48,7 +48,7 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:259](https://github.com/mksunny1/apption/blob/b06f059586e3c06c29fccfd5bd8250a5c5e800b1/src/action.ts#L259)
+[action.ts:259](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L259)
 
 ## Properties
 
@@ -62,7 +62,7 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:258](https://github.com/mksunny1/apption/blob/b06f059586e3c06c29fccfd5bd8250a5c5e800b1/src/action.ts#L258)
+[action.ts:258](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L258)
 
 ## Methods
 
@@ -86,4 +86,4 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:298](https://github.com/mksunny1/apption/blob/b06f059586e3c06c29fccfd5bd8250a5c5e800b1/src/action.ts#L298)
+[action.ts:298](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/action.ts#L298)

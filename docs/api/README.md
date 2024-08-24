@@ -23,7 +23,7 @@ const rowId = row.querySelector('td'), rowlbl = row.querySelector('a');
 const AppChildrenActions = class extends ChildrenActions {
     render(item) {
         rowId.firstChild.nodeValue = item.id;
-        rowlbl.firstChild.nodeValue = item.lb;
+        rowlbl.firstChild.nodeValue = item.lbl;
         return row.cloneNode(true);
     }
 }, actions = [new ArrayActions(array), new AppChildrenActions(tbody)];

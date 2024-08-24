@@ -33,4 +33,4 @@ console.log(obj)   // { a1: 1, b1: 2, c1: 3 }
 
 ## Defined in
 
-[object.ts:61](https://github.com/mksunny1/apption/blob/b06f059586e3c06c29fccfd5bd8250a5c5e800b1/src/object.ts#L61)
+[object.ts:61](https://github.com/mksunny1/apption/blob/d0bf763109284abcb2484dd7dfd7111ee7475add/src/object.ts#L61)
