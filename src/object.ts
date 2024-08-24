@@ -87,7 +87,8 @@ export function map(object: any, mapper: ICallable, inPlace?: boolean) {
 }
 
 /**
- * Reduces the input object using the reducer (and optional initial value) and return the reduced value.
+ * Reduces the input object using the reducer (and optional initial value) 
+ * and return the reduced value.
  * 
  * 
  * @example
