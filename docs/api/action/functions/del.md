@@ -9,7 +9,7 @@
 > **del**(`map`): `void`
 
 Deletes specified properties from different objects.
-If an object or array of objects is `Lazy`, it will be called with the key first to obtain the 
+If an object or array of objects is [Lazy](../classes/Lazy.md), it will be called with the key first to obtain the 
 real values to work with.
 
 ## Parameters
@@ -32,4 +32,4 @@ console.log(obj2);    // { a: 1, c: 3}
 
 ## Defined in
 
-[action.ts:200](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L200)
+[action.ts:217](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L217)

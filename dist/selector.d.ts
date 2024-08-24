@@ -2,8 +2,23 @@
  * Functionality related to selecting elements in the DOM.
  */
 /**
- * A selection object, normally wrapped with a proxy. Used as the target of
- * the proxy object returned by `selector`
+ * Returns a selection object that lazily represents an element within the `treespace` element (or document).
+ * Calling [get]{@link Selector#get} returns the specified element.
+ * Calling {@link Selector#set} replaces the element and calling {@link Selector#delete}
+ * removes it.
+ *
+ * Selector instances are used as the target of the proxy object returned by {@link selector}
+ *
+ * @example
+ * import { Selector } from 'apption';
+ * document.body.innerHTML = `
+ * <div>I am a div</div>
+ * <p>I am a paragraph</p>
+ * <section>I am a section</section>
+ * <article>I am an article</article>
+ * `;
+ * const slct = new Selector(document.body);
+ * console.log(slct.get('article').textContent);  // I am an article
  *
  */
 export declare class Selector {
@@ -39,8 +54,23 @@ export declare class Selector {
  */
 export declare function selector(treespace?: Element, cls?: typeof Selector): Selector;
 /**
- * A selection object, normally wrapped with a proxy. Used as the target of
- * the proxy object returned by `member`
+ * Returns a selection object that lazily represents a property with the name within the `treespace` element (or document).
+ * Calling [get]{@link MemberSelector#get} returns the property in the specified element.
+ * Calling {@link MemberSelector#set} updates the property and calling {@link MemberSelector#delete}
+ * deletes it.
+ *
+ * MemberSelector instances are used as the target of the proxy object returned by {@link member}
+ *
+ * @example
+ * import { MemberSelector } from 'apption';
+ * document.body.innerHTML = `
+ * <div>I am a div</div>
+ * <p>I am a paragraph</p>
+ * <section>I am a section</section>
+ * <article>I am an article</article>
+ * `;
+ * const slct = new MemberSelector('textContent', document.body);
+ * console.log(slct.get('div'));  // I am a div
  *
  */
 export declare class MemberSelector extends Selector {
@@ -51,7 +81,7 @@ export declare class MemberSelector extends Selector {
     delete(key: any): void;
 }
 /**
- * Returns an object that represents a property with the name within the `treespace` (or document).
+ * Returns an object that lazily represents a property with the name within the `treespace` (or document).
  * Getting properties returns the property in the specified element and setting or deleting properties
  * updates or deletes the property correspondingly.
  *
@@ -74,8 +104,23 @@ export declare class MemberSelector extends Selector {
  */
 export declare function member(name: string, treespace?: Element, cls?: typeof MemberSelector): Selector;
 /**
- * A selection object, normally wrapped with a proxy. Used as the target of
- * the proxy object returned by `attr`
+ * Returns a selection object that lazily represents an attribute with the name within the `treespace` element (or document).
+ * Calling [get]{@link AttrSelector#get} returns the attribute in the specified element.
+ * Calling {@link AttrSelector#set} updates the attribute and calling {@link AttrSelector#delete}
+ * removes it.
+ *
+ * AttrSelector instances are also used as the target of the proxy object returned by {@link attr}
+ *
+ * @example
+ * import { attr } from 'apption';
+ * document.body.innerHTML = `
+ * <div>I am a div</div>
+ * <p class="main">I am a paragraph</p>
+ * <section>I am a section</section>
+ * <article>I am an article</article>
+ * `;
+ * const slct = new AttrSelector('class', document.body);
+ * console.log(slct.get('p'));  // main
  *
  */
 export declare class AttrSelector extends MemberSelector {
@@ -84,7 +129,7 @@ export declare class AttrSelector extends MemberSelector {
     delete(key: any): void;
 }
 /**
- * Returns an object that represents an attribute with the name within the `treespace` (or document).
+ * Returns an object that lazily represents an attribute with the name within the `treespace` element (or document).
  * Getting properties returns the attribute in the specified element and setting or deleting properties
  * updates or removes the attribute correspondingly.
  *
@@ -107,8 +152,23 @@ export declare class AttrSelector extends MemberSelector {
  */
 export declare function attr(name: string, treespace?: Element, cls?: typeof AttrSelector): Selector;
 /**
- * A selection object, normally wrapped with a proxy. Used as the target of
- * the proxy object returned by `method`
+ * Returns a selection object that lazily represents a method with the name within the `treespace` element (or document).
+ * Invoking [call]{@link AttrSelector#get} will call the corresponding method on the
+ * element selected with the `key` argument.
+ *
+ * This is used as the target of the proxy object returned by {@link method}
+ *
+ * @example
+ * import { MethodSelector } from 'apption';
+ * document.body.innerHTML = `
+ * <div>I am a div</div>
+ * <p>I am a paragraph</p>
+ * <section>I am a section</section>
+ * <article>I am an article</article>
+ * `;
+ * const slct = new MethodSelector('remove', document.body);
+ * slct.call('section');
+ * console.log(document.querySelector('section'));  // null
  *
  */
 export declare class MethodSelector extends Selector {
@@ -117,7 +177,7 @@ export declare class MethodSelector extends Selector {
     call(key: any, ...args: any[]): any;
 }
 /**
- * Returns an object that represents a method with the name within the `treespace` (or document).
+ * Returns an object that lazily represents a method with the name within the `treespace` (or document).
  * Calling its methods calls the corresponding method in the specified element.
  *
  * @example

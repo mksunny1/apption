@@ -6,7 +6,7 @@
 
 # Interface: IAction\<T, U\>
 
-The action interface which matches an object with the `act` method.
+The action interface which is an object with the `act` method.
 
 ## Type Parameters
 
@@ -30,4 +30,4 @@ The action interface which matches an object with the `act` method.
 
 #### Defined in
 
-[action.ts:48](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L48)
+[action.ts:49](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L49)

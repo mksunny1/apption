@@ -10,8 +10,8 @@
 
 Calls specified methods in multiple objects.
 
-If any array of objects (value) or object (value item) is of type `Lazy`, it is first resolved to obtain the 
-object(s) to work with.
+If any array of objects (value) or object (value item) is of type [Lazy](../classes/Lazy.md), 
+it is first resolved to obtain the object(s) to work with.
 
 ## Parameters
 
@@ -27,12 +27,14 @@ object(s) to work with.
 
 ```ts
 import { call } from 'apption'
-let arr1 = [1, 2, 3], arr2 = [1, 2, 3];
-call({ push: [arr1], unshift: [arr2] }, 20, 21);
+let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
+const actions = { push: [arr1, arr3], unshift: [arr2] };
+call(actions, 20, 21);
 console.log(arr1)   // [1, 2, 3, 20, 21]
 console.log(arr2)   // [20, 21, 1, 2, 3]
+console.log(arr3)   // [1, 2, 3, 20, 21]
 ```
 
 ## Defined in
 
-[action.ts:146](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L146)
+[action.ts:162](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L162)

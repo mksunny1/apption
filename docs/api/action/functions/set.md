@@ -10,7 +10,7 @@
 
 Sets specified properties in different objects.
 
-If any array of objects (value) or object (value item) is of type `Lazy`, it is first resolved to obtain the 
+If any array of objects (value) or object (value item) is of type [Lazy](../classes/Lazy.md), it is first resolved to obtain the 
 object(s) to work with.
 
 ## Parameters
@@ -28,11 +28,12 @@ object(s) to work with.
 ```ts
 import { set } from 'apption'
 let obj1 = { a: 1, b: 2, c: 3 }, obj2 = { a: 1, b: 2, c: 3 };
-set({ a: [obj1], b: [obj2], c: [obj1] }, 20);
+const actions = { a: [obj1], b: [obj2], c: [obj1] };
+set(actions, 20);
 console.log(obj1);    // { a: 20, b: 2, c: 20}
 console.log(obj2);    // { a: 1, b: 20, c: 3}
 ```
 
 ## Defined in
 
-[action.ts:175](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L175)
+[action.ts:192](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L192)

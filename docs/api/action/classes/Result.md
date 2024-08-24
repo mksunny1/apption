@@ -8,7 +8,7 @@
 
 An object returned from a function (or `Action.act` implementation) which specifies our intent to 
 replace the propagated arguments with the new arguments list it is initialized with. This allows the 
-`act` function to behave like a pipe operator if we require such. This is much more limited than 
+`act` function to behave like a pipe operator if we require such. This is more limited than 
 passing the same argument list to all the functions, but may perhaps be desired for some reason.
 
 ## Example
@@ -40,7 +40,7 @@ console.log(count);   // 25
 
 #### Defined in
 
-[action.ts:88](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L88)
+[action.ts:96](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L96)
 
 ## Properties
 
@@ -50,4 +50,4 @@ console.log(count);   // 25
 
 #### Defined in
 
-[action.ts:87](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L87)
+[action.ts:95](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L95)

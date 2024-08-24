@@ -6,8 +6,26 @@
 
 # Class: Selector
 
-A selection object, normally wrapped with a proxy. Used as the target of 
-the proxy object returned by `selector`
+Returns a selection object that lazily represents an element within the `treespace` element (or document).
+Calling [get][Selector#get](Selector.md#get) returns the specified element.  
+Calling [Selector#set](Selector.md#set) replaces the element and calling [Selector#delete](Selector.md#delete)
+removes it. 
+
+Selector instances are used as the target of the proxy object returned by [selector](../functions/selector.md)
+
+## Example
+
+```ts
+import { Selector } from 'apption';
+document.body.innerHTML = `
+<div>I am a div</div>
+<p>I am a paragraph</p>
+<section>I am a section</section>
+<article>I am an article</article>
+`;
+const slct = new Selector(document.body);
+console.log(slct.get('article').textContent);  // I am an article
+```
 
 ## Extended by
 
@@ -30,7 +48,7 @@ the proxy object returned by `selector`
 
 #### Defined in
 
-[selector.ts:26](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L26)
+[selector.ts:41](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L41)
 
 ## Properties
 
@@ -40,7 +58,7 @@ the proxy object returned by `selector`
 
 #### Defined in
 
-[selector.ts:25](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L25)
+[selector.ts:40](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L40)
 
 ## Methods
 
@@ -58,7 +76,7 @@ the proxy object returned by `selector`
 
 #### Defined in
 
-[selector.ts:41](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L41)
+[selector.ts:56](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L56)
 
 ***
 
@@ -76,7 +94,7 @@ the proxy object returned by `selector`
 
 #### Defined in
 
-[selector.ts:29](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L29)
+[selector.ts:44](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L44)
 
 ***
 
@@ -96,4 +114,4 @@ the proxy object returned by `selector`
 
 #### Defined in
 
-[selector.ts:34](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L34)
+[selector.ts:49](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L49)

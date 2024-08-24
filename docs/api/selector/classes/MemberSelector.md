@@ -6,8 +6,26 @@
 
 # Class: MemberSelector
 
-A selection object, normally wrapped with a proxy. Used as the target of 
-the proxy object returned by `member`
+Returns a selection object that lazily represents a property with the name within the `treespace` element (or document).
+Calling [get][MemberSelector#get](MemberSelector.md#get) returns the property in the specified element.  
+Calling [MemberSelector#set](MemberSelector.md#set) updates the property and calling [MemberSelector#delete](MemberSelector.md#delete)
+deletes it. 
+
+MemberSelector instances are used as the target of the proxy object returned by [member](../functions/member.md)
+
+## Example
+
+```ts
+import { MemberSelector } from 'apption';
+document.body.innerHTML = `
+<div>I am a div</div>
+<p>I am a paragraph</p>
+<section>I am a section</section>
+<article>I am an article</article>
+`;
+const slct = new MemberSelector('textContent', document.body);
+console.log(slct.get('div'));  // I am a div
+```
 
 ## Extends
 
@@ -39,7 +57,7 @@ the proxy object returned by `member`
 
 #### Defined in
 
-[selector.ts:81](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L81)
+[selector.ts:111](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L111)
 
 ## Properties
 
@@ -49,7 +67,7 @@ the proxy object returned by `member`
 
 #### Defined in
 
-[selector.ts:80](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L80)
+[selector.ts:110](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L110)
 
 ***
 
@@ -63,7 +81,7 @@ the proxy object returned by `member`
 
 #### Defined in
 
-[selector.ts:25](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L25)
+[selector.ts:40](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L40)
 
 ## Methods
 
@@ -85,7 +103,7 @@ the proxy object returned by `member`
 
 #### Defined in
 
-[selector.ts:91](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L91)
+[selector.ts:121](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L121)
 
 ***
 
@@ -107,7 +125,7 @@ the proxy object returned by `member`
 
 #### Defined in
 
-[selector.ts:85](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L85)
+[selector.ts:115](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L115)
 
 ***
 
@@ -131,4 +149,4 @@ the proxy object returned by `member`
 
 #### Defined in
 
-[selector.ts:88](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L88)
+[selector.ts:118](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L118)

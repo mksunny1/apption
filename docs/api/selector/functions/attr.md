@@ -8,7 +8,7 @@
 
 > **attr**(`name`, `treespace`?, `cls`?): [`Selector`](../classes/Selector.md)
 
-Returns an object that represents an attribute with the name within the `treespace` (or document).
+Returns an object that lazily represents an attribute with the name within the `treespace` element (or document).
 Getting properties returns the attribute in the specified element and setting or deleting properties 
 updates or removes the attribute correspondingly.
 
@@ -40,4 +40,4 @@ console.log(slct.p);  // main
 
 ## Defined in
 
-[selector.ts:161](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L161)
+[selector.ts:206](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L206)

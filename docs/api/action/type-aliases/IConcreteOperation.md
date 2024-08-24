@@ -8,6 +8,9 @@
 
 > **IConcreteOperation**: [`ICallable`](../interfaces/ICallable.md) \| [`IOperations`](IOperations.md) \| [`Action`](../classes/Action.md)
 
+Represents a function, Action or array containing these and/or similar arrays.
+May also be an instance of `Lazy` which resolves to the aforementioned.
+
 ## Defined in
 
-[action.ts:51](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L51)
+[action.ts:56](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L56)

@@ -8,7 +8,7 @@
 
 > **method**(`name`, `treespace`?, `cls`?): [`MethodSelector`](../classes/MethodSelector.md)
 
-Returns an object that represents a method with the name within the `treespace` (or document).
+Returns an object that lazily represents a method with the name within the `treespace` (or document).
 Calling its methods calls the corresponding method in the specified element.
 
 ## Parameters
@@ -40,4 +40,4 @@ console.log(document.querySelector('section'));  // null
 
 ## Defined in
 
-[selector.ts:208](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L208)
+[selector.ts:268](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L268)

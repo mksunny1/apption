@@ -3,8 +3,9 @@
  */
 import { ICallable, IKey } from "./action";
 /**
- * Combine the keys with corresponding values to form and return an object.
- * The value could be `undefined`.
+ * Combine `keys` with corresponding items in `values` to form and return an object.
+ * `values` could be `undefined` may not have items corresponding to some keys but
+ * all keys must be provided.
  *
  * @example
  * import { zip } from 'apption'

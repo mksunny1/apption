@@ -6,8 +6,8 @@
 
 # Class: DelAction
 
-A wrapper around `del` to store the map. The map can be an instance 
-of `Lazy` so that it is computed every time `act` is called.
+A wrapper around [del](../functions/del.md) to store the map. The map can be an instance 
+of [Lazy](Lazy.md) so that it is computed every time [DelAction#act](DelAction.md#act) is called.
 
 ## Example
 
@@ -48,7 +48,7 @@ console.log(obj2);    // { a: 1, c: 3}
 
 #### Defined in
 
-[action.ts:242](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L242)
+[action.ts:259](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L259)
 
 ## Properties
 
@@ -62,7 +62,7 @@ console.log(obj2);    // { a: 1, c: 3}
 
 #### Defined in
 
-[action.ts:241](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L241)
+[action.ts:258](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L258)
 
 ## Methods
 
@@ -84,4 +84,4 @@ console.log(obj2);    // { a: 1, c: 3}
 
 #### Defined in
 
-[action.ts:299](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L299)
+[action.ts:316](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L316)

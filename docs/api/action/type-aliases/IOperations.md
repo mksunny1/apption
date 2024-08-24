@@ -8,9 +8,8 @@
 
 > **IOperations**: ([`IConcreteOperation`](IConcreteOperation.md) \| [`Lazy`](../classes/Lazy.md)\<[`IConcreteOperation`](IConcreteOperation.md)\>)[]
 
-Represents a function, Action or array containing these and/or similar arrays.
-May also be an instance of `Lazy` which resolves to the aforementioned.
+An [IConcreteOperation](IConcreteOperation.md) or a [Lazy](../classes/Lazy.md) that returns one.
 
 ## Defined in
 
-[action.ts:57](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L57)
+[action.ts:61](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L61)

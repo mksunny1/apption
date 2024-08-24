@@ -6,8 +6,26 @@
 
 # Class: AttrSelector
 
-A selection object, normally wrapped with a proxy. Used as the target of 
-the proxy object returned by `attr`
+Returns a selection object that lazily represents an attribute with the name within the `treespace` element (or document).
+Calling [get][AttrSelector#get](AttrSelector.md#get) returns the attribute in the specified element.  
+Calling [AttrSelector#set](AttrSelector.md#set) updates the attribute and calling [AttrSelector#delete](AttrSelector.md#delete)
+removes it. 
+
+AttrSelector instances are also used as the target of the proxy object returned by [attr](../functions/attr.md)
+
+## Example
+
+```ts
+import { attr } from 'apption';
+document.body.innerHTML = `
+<div>I am a div</div>
+<p class="main">I am a paragraph</p>
+<section>I am a section</section>
+<article>I am an article</article>
+`;
+const slct = new AttrSelector('class', document.body);
+console.log(slct.get('p'));  // main
+```
 
 ## Extends
 
@@ -35,7 +53,7 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-[selector.ts:81](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L81)
+[selector.ts:111](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L111)
 
 ## Properties
 
@@ -49,7 +67,7 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-[selector.ts:80](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L80)
+[selector.ts:110](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L110)
 
 ***
 
@@ -63,7 +81,7 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-[selector.ts:25](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L25)
+[selector.ts:40](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L40)
 
 ## Methods
 
@@ -85,7 +103,7 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-[selector.ts:134](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L134)
+[selector.ts:179](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L179)
 
 ***
 
@@ -107,7 +125,7 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-[selector.ts:128](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L128)
+[selector.ts:173](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L173)
 
 ***
 
@@ -131,4 +149,4 @@ the proxy object returned by `attr`
 
 #### Defined in
 
-[selector.ts:131](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L131)
+[selector.ts:176](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L176)

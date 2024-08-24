@@ -8,7 +8,7 @@
 
 > **member**(`name`, `treespace`?, `cls`?): [`Selector`](../classes/Selector.md)
 
-Returns an object that represents a property with the name within the `treespace` (or document).
+Returns an object that lazily represents a property with the name within the `treespace` (or document).
 Getting properties returns the property in the specified element and setting or deleting properties 
 updates or deletes the property correspondingly.
 
@@ -40,4 +40,4 @@ console.log(slct.div);  // I am a div
 
 ## Defined in
 
-[selector.ts:118](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L118)
+[selector.ts:148](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L148)

@@ -6,8 +6,8 @@
 
 # Class: SetAction
 
-A wrapper around `set` to store the map. The map can be an instance 
-of `Lazy` so that it is computed every time `act` is called.
+A wrapper around [set](../functions/set.md) to store the map. The map can be an instance 
+of [Lazy](Lazy.md) so that it is computed every time [SetAction#act](SetAction.md#act) is called.
 
 ## Example
 
@@ -48,7 +48,7 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:242](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L242)
+[action.ts:259](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L259)
 
 ## Properties
 
@@ -62,7 +62,7 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:241](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L241)
+[action.ts:258](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L258)
 
 ## Methods
 
@@ -86,4 +86,4 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:281](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L281)
+[action.ts:298](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L298)

@@ -6,8 +6,8 @@
 
 # Class: Action
 
-A wrapper around the `act` function to store the operations array. The operartions can be an instance 
-of `Lazy` so that it is computed every time `act` is called.
+A wrapper around [act](../functions/act.md) to store the operations array. The operartions can be an instance 
+of [Lazy](Lazy.md) so that it is computed every time [Action#act](Action.md#act) is called.
 
 ## Example
 
@@ -43,7 +43,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:229](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L229)
+[action.ts:246](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L246)
 
 ## Properties
 
@@ -53,7 +53,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:228](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L228)
+[action.ts:245](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L245)
 
 ## Methods
 
@@ -75,4 +75,4 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:232](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L232)
+[action.ts:249](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L249)

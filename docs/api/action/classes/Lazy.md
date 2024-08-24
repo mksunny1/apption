@@ -6,9 +6,10 @@
 
 # Class: Lazy\<T\>
 
-Wraps a function that returns a real list or map of functions or objects to work with.
-It removes the need to hold references to concrete objects before-hand, which may be 
-memory-inneficient.
+Wraps a function that returns a real value to work with when an action is triggered. 
+ALl actions exported by this module ([act](../functions/act.md), [call](../functions/call.md), [set](../functions/set.md), [del](../functions/del.md)) 
+recognise instances of this type. This removes the need to hold references to concrete 
+objects before-hand, which may be memory-inneficient.
 
 ## Example
 
@@ -40,7 +41,7 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:36](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L36)
+[action.ts:37](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L37)
 
 ## Properties
 
@@ -50,7 +51,7 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:35](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L35)
+[action.ts:36](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L36)
 
 ## Methods
 
@@ -68,4 +69,4 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:39](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/action.ts#L39)
+[action.ts:40](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/action.ts#L40)

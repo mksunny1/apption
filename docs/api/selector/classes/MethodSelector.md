@@ -6,8 +6,26 @@
 
 # Class: MethodSelector
 
-A selection object, normally wrapped with a proxy. Used as the target of 
-the proxy object returned by `method`
+Returns a selection object that lazily represents a method with the name within the `treespace` element (or document).
+Invoking [call][AttrSelector#get](AttrSelector.md#get) will call the corresponding method on the 
+element selected with the `key` argument.
+
+This is used as the target of the proxy object returned by [method](../functions/method.md)
+
+## Example
+
+```ts
+import { MethodSelector } from 'apption';
+document.body.innerHTML = `
+<div>I am a div</div>
+<p>I am a paragraph</p>
+<section>I am a section</section>
+<article>I am an article</article>
+`;
+const slct = new MethodSelector('remove', document.body);
+slct.call('section');
+console.log(document.querySelector('section'));  // null
+```
 
 ## Extends
 
@@ -35,7 +53,7 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:172](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L172)
+[selector.ts:232](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L232)
 
 ## Properties
 
@@ -45,7 +63,7 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:171](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L171)
+[selector.ts:231](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L231)
 
 ***
 
@@ -59,7 +77,7 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:25](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L25)
+[selector.ts:40](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L40)
 
 ## Methods
 
@@ -79,7 +97,7 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:176](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L176)
+[selector.ts:236](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L236)
 
 ***
 
@@ -101,7 +119,7 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:41](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L41)
+[selector.ts:56](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L56)
 
 ***
 
@@ -123,7 +141,7 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:29](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L29)
+[selector.ts:44](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L44)
 
 ***
 
@@ -147,4 +165,4 @@ the proxy object returned by `method`
 
 #### Defined in
 
-[selector.ts:34](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/selector.ts#L34)
+[selector.ts:49](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/selector.ts#L49)

@@ -8,8 +8,9 @@
 
 > **zip**(`keys`, `values`?): `object`
 
-Combine the keys with corresponding values to form and return an object.
-The value could be `undefined`.
+Combine `keys` with corresponding items in `values` to form and return an object.
+`values` could be `undefined` may not have items corresponding to some keys but 
+all keys must be provided.
 
 ## Parameters
 
@@ -31,4 +32,4 @@ console.log(obj)   // { a: 1, b: 2, c: 3 }
 
 ## Defined in
 
-[object.ts:20](https://github.com/mksunny1/apption/blob/035a4a06796a9b49dd42992a6540b71b3edfb590/src/object.ts#L20)
+[object.ts:21](https://github.com/mksunny1/apption/blob/45b0ba573a0535c0a6c3b4df2b60698c89aab92a/src/object.ts#L21)
