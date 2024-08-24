@@ -1,6 +1,6 @@
 {
   "name": "apption",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple library for creating modern interactive applications",
   "main": "dist/apption.js",
   "files": [

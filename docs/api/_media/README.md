@@ -1,50 +1,40 @@
-**apption** • [**Docs**](modules.md)
+[**apption**](../README.md) • **Docs**
 
 ***
 
-# Apption
+[apption](../modules.md) / action
 
-This is a simple library for creating frontend applications. It exports a few primitives for succinctly expressing many common operations in pure JavaScript. It works very well with modern app architectures based on components. The library encourages application code 
-which are flexible, clean, well structured, fast, memory-efficient, easy to understand and easy to maintain. This is also a tiny library with minimal load-time overhead. It is an improvement on the earlier Class-Action suite of libraries; therefore it replaces them in [deleight](https://github.com/mksunny1/deleight). Anyone still interested in any of those libraries can find them [here](https://github.com/mksunny1/).
+# action
 
-## Installation
+## Index
 
-`npm i apption`
+### Classes
 
-## Usage
+- [Action](classes/Action.md)
+- [CallAction](classes/CallAction.md)
+- [DelAction](classes/DelAction.md)
+- [Lazy](classes/Lazy.md)
+- [ObjectAction](classes/ObjectAction.md)
+- [Result](classes/Result.md)
+- [SetAction](classes/SetAction.md)
 
-```js
-import { call, ArrayActions, ChildrenActions } from 'apption';
+### Interfaces
 
-const array = [];
-const tbody = document.querySelector('tbody'), row = document.querySelector('template').content.firstElementChild;
-const rowId = row.querySelector('td'), rowlbl = row.querySelector('a');
+- [IAction](interfaces/IAction.md)
+- [ICallable](interfaces/ICallable.md)
+- [IMap](interfaces/IMap.md)
 
-const AppChildrenActions = class extends ChildrenActions {
-    render(item) {
-        rowId.firstChild.nodeValue = item.id;
-        rowlbl.firstChild.nodeValue = item.lb;
-        return row.cloneNode(true);
-    } update(value = ' !!!') {
-        for (let i = 0; i < array.length; i += 10) 
-            this.element.children[i].querySelector('a').firstChild.nodeValue = array[i].lbl += value;
-    }
-}, actions = [new ArrayActions(array), new AppChildrenActions(tbody)];
+### Type Aliases
 
-call({ push: actions }, { id: 1, lbl: 'First item' }, { id: 2, lbl: 'Second item' } );
+- [IActionMap](type-aliases/IActionMap.md)
+- [IActionMapObject](type-aliases/IActionMapObject.md)
+- [IConcreteOperation](type-aliases/IConcreteOperation.md)
+- [IKey](type-aliases/IKey.md)
+- [IOperations](type-aliases/IOperations.md)
 
-```
+### Functions
 
-## Documentation
-
-This library exports a single class with a very simple API which can be picked up in a few minutes [here](_media/README.md).
-
-## Contributing
-
-Help improve Apption by contributing to this project. You can contribute in many ways. See the [contributing guidelines](_media/CONTRIBUTING.md). You can also show your support by sponsoring us.
-
-Thank you for contributing.
-
-## Sponsors
-
-...
+- [act](functions/act.md)
+- [call](functions/call.md)
+- [del](functions/del.md)
+- [set](functions/set.md)
