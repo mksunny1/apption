@@ -48,7 +48,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:43](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L43)
+[selector.ts:43](https://github.com/mksunny1/apption/blob/db22d834b74a7e66a6f9b8ca626095b91c5a8508/src/selector.ts#L43)
 
 ## Properties
 
@@ -58,7 +58,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:42](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L42)
+[selector.ts:42](https://github.com/mksunny1/apption/blob/db22d834b74a7e66a6f9b8ca626095b91c5a8508/src/selector.ts#L42)
 
 ## Methods
 
@@ -76,7 +76,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:58](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L58)
+[selector.ts:58](https://github.com/mksunny1/apption/blob/db22d834b74a7e66a6f9b8ca626095b91c5a8508/src/selector.ts#L58)
 
 ***
 
@@ -94,7 +94,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/db22d834b74a7e66a6f9b8ca626095b91c5a8508/src/selector.ts#L46)
 
 ***
 
@@ -114,4 +114,4 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:51](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/selector.ts#L51)
+[selector.ts:51](https://github.com/mksunny1/apption/blob/db22d834b74a7e66a6f9b8ca626095b91c5a8508/src/selector.ts#L51)

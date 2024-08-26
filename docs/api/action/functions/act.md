@@ -47,4 +47,4 @@ console.log(count);   // 93
 
 ## Defined in
 
-[action.ts:132](https://github.com/mksunny1/apption/blob/3d0322baa807496b8ecfb44bd80265a9049ec621/src/action.ts#L132)
+[action.ts:132](https://github.com/mksunny1/apption/blob/db22d834b74a7e66a6f9b8ca626095b91c5a8508/src/action.ts#L132)

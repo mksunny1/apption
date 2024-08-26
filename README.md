@@ -3,16 +3,28 @@
 This is a simple library for creating frontend applications. It exports a few primitives for succinctly expressing many common operations in pure JavaScript. It works very well with modern app architectures based on components. The library encourages application code 
 which are flexible, clean, well structured, fast, memory-efficient, easy to understand and easy to maintain. This is also a tiny library with minimal load-time overhead. It is an improvement on the earlier Class-Action suite of libraries; therefore it replaces them in [deleight](https://github.com/mksunny1/deleight). Anyone still interested in any of those libraries can find them [here](https://github.com/mksunny1/).
 
+
 ## Installation
 
+### NPM
+
 `npm i apption`
+
+```js
+import { call, ArrayActions, ChildrenActions } from 'apption';
+```
+
+### CDN
+
+```js
+import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action.min.js';
+import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array.min.js';
+```
 
 
 ## Usage
 
 ```js
-import { call, ArrayActions, ChildrenActions } from 'apption';
-
 const array = [];
 const tbody = document.querySelector('tbody'), row = document.querySelector('template').content.firstElementChild;
 const rowId = row.querySelector('td'), rowlbl = row.querySelector('a');

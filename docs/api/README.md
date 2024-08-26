@@ -9,13 +9,24 @@ which are flexible, clean, well structured, fast, memory-efficient, easy to unde
 
 ## Installation
 
+### NPM
+
 `npm i apption`
+
+```js
+import { call, ArrayActions, ChildrenActions } from 'apption';
+```
+
+### CDN
+
+```js
+import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action.min.js';
+import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array.min.js';
+```
 
 ## Usage
 
 ```js
-import { call, ArrayActions, ChildrenActions } from 'apption';
-
 const array = [];
 const tbody = document.querySelector('tbody'), row = document.querySelector('template').content.firstElementChild;
 const rowId = row.querySelector('td'), rowlbl = row.querySelector('a');
