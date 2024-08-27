@@ -54,7 +54,9 @@ The library is divided into 4 parts. [Action](./docs/api/action//README.md) cont
 
 ## Contributing
 
-Help improve Apption by contributing to this project. You can contribute in many ways. See the [contributing guidelines](./CONTRIBUTING.md). You can also show your support by sponsoring us.
+Help improve Apption by contributing to this project. You can contribute in many ways. See the [contributing guidelines](./CONTRIBUTING.md). You can also show your support by sponsoring us. Your contributions will go a long way in ensuring the continued development of apption.
+
+[![](https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=S2ZW3RJSDHASW)
 
 Thank you for contributing.
 
