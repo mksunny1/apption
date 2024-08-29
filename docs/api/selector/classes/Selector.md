@@ -48,7 +48,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:43](https://github.com/mksunny1/apption/blob/b82cc0441c2a3fb855ccc4681a8be2e6e4bd52ea/src/selector.ts#L43)
+[selector.ts:43](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/selector.ts#L43)
 
 ## Properties
 
@@ -58,7 +58,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:42](https://github.com/mksunny1/apption/blob/b82cc0441c2a3fb855ccc4681a8be2e6e4bd52ea/src/selector.ts#L42)
+[selector.ts:42](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/selector.ts#L42)
 
 ## Methods
 
@@ -76,7 +76,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:58](https://github.com/mksunny1/apption/blob/b82cc0441c2a3fb855ccc4681a8be2e6e4bd52ea/src/selector.ts#L58)
+[selector.ts:58](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/selector.ts#L58)
 
 ***
 
@@ -94,7 +94,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/b82cc0441c2a3fb855ccc4681a8be2e6e4bd52ea/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/selector.ts#L46)
 
 ***
 
@@ -114,4 +114,4 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:51](https://github.com/mksunny1/apption/blob/b82cc0441c2a3fb855ccc4681a8be2e6e4bd52ea/src/selector.ts#L51)
+[selector.ts:51](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/selector.ts#L51)

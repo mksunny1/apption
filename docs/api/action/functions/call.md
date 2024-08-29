@@ -37,4 +37,4 @@ console.log(arr3)   // [1, 2, 3, 20, 21]
 
 ## Defined in
 
-[action.ts:164](https://github.com/mksunny1/apption/blob/b82cc0441c2a3fb855ccc4681a8be2e6e4bd52ea/src/action.ts#L164)
+[action.ts:164](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L164)

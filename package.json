@@ -1,6 +1,6 @@
 {
   "name": "apption",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A simple library for creating modern interactive applications",
   "main": "dist/apption.js",
   "files": [
@@ -34,7 +34,7 @@
     "reactivity",
     "application"
   ],
-  "author": "Mark Sun",
+  "author": "Mark Sun and Oluwaseyi Shoboyejo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mksunny1/apption/issues"
