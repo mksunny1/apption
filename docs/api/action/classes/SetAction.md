@@ -48,7 +48,7 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:261](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L261)
+[action.ts:277](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L277)
 
 ## Properties
 
@@ -62,7 +62,27 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 #### Defined in
 
-[action.ts:260](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L260)
+[action.ts:273](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L273)
+
+## Accessors
+
+### actor
+
+> `get` **actor**(): `any`
+
+The function equivalent of this action.
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[`ObjectAction`](ObjectAction.md).[`actor`](ObjectAction.md#actor)
+
+#### Defined in
+
+[action.ts:283](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L283)
 
 ## Methods
 
@@ -84,6 +104,10 @@ console.log(obj2);    // { a: 1, b: 20, c: 3}
 
 [`IAction`](../interfaces/IAction.md).[`act`](../interfaces/IAction.md#act)
 
+#### Overrides
+
+[`ObjectAction`](ObjectAction.md).[`act`](ObjectAction.md#act)
+
 #### Defined in
 
-[action.ts:300](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L300)
+[action.ts:321](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L321)

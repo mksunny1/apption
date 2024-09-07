@@ -13,11 +13,11 @@ General app actions.
 ### Classes
 
 - [Action](classes/Action.md)
+- [Args](classes/Args.md)
 - [CallAction](classes/CallAction.md)
 - [DelAction](classes/DelAction.md)
 - [Lazy](classes/Lazy.md)
 - [ObjectAction](classes/ObjectAction.md)
-- [Result](classes/Result.md)
 - [SetAction](classes/SetAction.md)
 
 ### Interfaces

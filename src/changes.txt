@@ -1,0 +1,5 @@
+
+1. Renamed `Result` class to `Args` to be more semantically correct
+2. Added `actor`property to the Action classes for easy conversion to functions in user code
+3. Added the transformer module which exports `transformer`, `arg` 
+and `redirect` functions. Convenient for computed values.

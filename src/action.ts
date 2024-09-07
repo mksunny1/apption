@@ -83,17 +83,17 @@ export type IActionMap = IActionMapObject | Lazy<IActionMapObject>;
  * passing the same argument list to all the functions, but may perhaps be desired for some reason.
  * 
  * @example
- * import { act, Result } from 'apption'
+ * import { act, Args } from 'apption'
  * let count = 0;
  * act([
  *     (a1, a2) => count += a1,
- *     (a1, a2) => new Result([a2, 0]),
+ *     (a1, a2) => new Args([a2, 0]),
  *     (a1, a2) => count += a2 + 5
  * ], 20, 21);
  * console.log(count);   // 25
  * 
  */
-export class Result {
+export class Args {
     value: any[];
     constructor(value: any[]) {
         this.value = value;
@@ -138,7 +138,7 @@ export function act(operations: IOperations, ...args: any[]) {
         else if (operation instanceof Action) result = operation.act(...args);
         else result = operation(...args);
 
-        if (result instanceof Result) args = result.value;
+        if (result instanceof Args) args = result.value;
     }
     return result;
 }
@@ -168,7 +168,7 @@ export function call(map: IActionMapObject, ...args: any[]) {
         for (object of objects as any[]) {
             if (object instanceof Lazy) object = object.value(key, ...args);
             result = (object as any)[key](...args);
-            if (result instanceof Result) args = result.value;
+            if (result instanceof Args) args = result.value;
         }
     }
     return result;
@@ -251,15 +251,37 @@ export class Action implements IAction<any[], (any[]|void)> {
     act(...args: any[]): any[] | void {
         return act(this.operations instanceof Lazy? this.operations.value(...args): this.operations, ...args);
     }
+    /**
+     * The function equivalent of this action.
+     * @example
+     * import { CallAction } from 'apption'
+     * let arr1 = [1, 2, 3], arr2 = [1, 2, 3];
+     * const action = new CallAction({ push: [arr1], unshift: [arr2] }).actor;
+     * action(20, 21);
+     * console.log(arr1)   // [1, 2, 3, 20, 21]
+     * console.log(arr2)   // [20, 21, 1, 2, 3]
+     */
+    get actor() {
+        return this.act.bind(this);
+    }
 }
 
 /**
  * Base class for actions on objects
  */
-export class ObjectAction {
+export class ObjectAction<T extends any[] = any[], U extends any = any> {
     map: IActionMap;
+    act(...args: T): U {
+        return
+    }
     constructor(map: { [key: string | number]: any[] }) {
         this.map = map;
+    }
+    /**
+     * The function equivalent of this action.
+     */
+    get actor() {
+        return this.act.bind(this);
     }
 }
 
@@ -280,7 +302,6 @@ export class CallAction extends ObjectAction implements IAction<any[], any>  {
     act(...args: any[]) {
         call(this.map instanceof Lazy? this.map.value(...args): this.map, ...args);
     }
-
 }
 
 /**

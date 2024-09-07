@@ -30,4 +30,4 @@ The action interface which is an object with the `act` method.
 
 #### Defined in
 
-[action.ts:51](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L51)
+[action.ts:51](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L51)

@@ -1,5 +1,7 @@
 /**
- * functionality related to objects.
+ * Primitives for functionally creating and manipulating objects.
+ *
+ * @module
  */
 /**
  * Combine `keys` with corresponding items in `values` to form and return an object.
@@ -84,7 +86,8 @@ export function map(object, mapper, inPlace) {
     return result;
 }
 /**
- * Reduces the input object using the reducer (and optional initial value) and return the reduced value.
+ * Reduces the input object using the reducer (and optional initial value)
+ * and return the reduced value.
  *
  *
  * @example

@@ -1,7 +1,7 @@
 
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { act, call, set, del, Action, CallAction, SetAction, DelAction, Lazy, Result } from '../dist/action.js'
+import { act, call, set, del, Action, CallAction, SetAction, DelAction, Lazy, Args } from '../dist/action.js'
 
 
 describe('action.act', async t1 => {
@@ -29,7 +29,7 @@ describe('action.act', async t1 => {
         let count = 0;
         act([
             (a1, a2) => count += a1,
-            (a1, a2) => new Result([count += a2, 0]),
+            (a1, a2) => new Args([count += a2, 0]),
             (a1, a2) => count += a2 + 1
         ], 20, 21);
         assert.equal(count, 42);
@@ -155,6 +155,17 @@ describe('action.Action', async t1 => {
         assert.equal(count, 63);
     });
 
+    await it('Should correctly act as a function', async t2 => {
+        let count = 0;
+        const action = new Action([
+            (a1, a2) => count += a1,
+            (a1, a2) => count += a2,
+            (a1, a2) => count += a2 + 1
+        ]).actor;
+        action(20, 21);
+        assert.equal(count, 63);
+    });
+
     await it('Should resolve `Lazy` values', async t2 => {
         let count = 0;
         const action = new Action(new Lazy(() => [
@@ -175,6 +186,16 @@ describe('action.CallAction', async t1 => {
             push: [arr1], unshift: [arr2]
         });
         action.act(20, 21)
+        assert.deepEqual(arr1, [1, 2, 3, 20, 21]);
+        assert.deepEqual(arr2, [20, 21, 1, 2, 3]);
+    });
+
+    await it('Should correctly act as a function', async t2 => {
+        let arr1 = [1, 2, 3], arr2 = [1, 2, 3];
+        const action = new CallAction({
+            push: [arr1], unshift: [arr2]
+        }).actor;
+        action(20, 21)
         assert.deepEqual(arr1, [1, 2, 3, 20, 21]);
         assert.deepEqual(arr2, [20, 21, 1, 2, 3]);
     });

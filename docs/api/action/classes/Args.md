@@ -2,9 +2,9 @@
 
 ***
 
-[apption](../../modules.md) / [action](../README.md) / Result
+[apption](../../modules.md) / [action](../README.md) / Args
 
-# Class: Result
+# Class: Args
 
 An object returned from a function (or `Action.act` implementation) which specifies our intent to 
 replace the propagated arguments with the new arguments list it is initialized with. This allows the 
@@ -14,11 +14,11 @@ passing the same argument list to all the functions, but may perhaps be desired 
 ## Example
 
 ```ts
-import { act, Result } from 'apption'
+import { act, Args } from 'apption'
 let count = 0;
 act([
     (a1, a2) => count += a1,
-    (a1, a2) => new Result([a2, 0]),
+    (a1, a2) => new Args([a2, 0]),
     (a1, a2) => count += a2 + 5
 ], 20, 21);
 console.log(count);   // 25
@@ -26,9 +26,9 @@ console.log(count);   // 25
 
 ## Constructors
 
-### new Result()
+### new Args()
 
-> **new Result**(`value`): [`Result`](Result.md)
+> **new Args**(`value`): [`Args`](Args.md)
 
 #### Parameters
 
@@ -36,11 +36,11 @@ console.log(count);   // 25
 
 #### Returns
 
-[`Result`](Result.md)
+[`Args`](Args.md)
 
 #### Defined in
 
-[action.ts:98](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L98)
+[action.ts:98](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L98)
 
 ## Properties
 
@@ -50,4 +50,4 @@ console.log(count);   // 25
 
 #### Defined in
 
-[action.ts:97](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L97)
+[action.ts:97](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L97)

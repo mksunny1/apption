@@ -1,5 +1,7 @@
 /**
- * functionality related to objects.
+ * Primitives for functionally creating and manipulating objects.
+ *
+ * @module
  */
 import { ICallable, IKey } from "./action";
 /**
@@ -63,7 +65,8 @@ export declare function mapKeys(object: any, mapper: ICallable, inPlace?: boolea
  */
 export declare function map(object: any, mapper: ICallable, inPlace?: boolean): any;
 /**
- * Reduces the input object using the reducer (and optional initial value) and return the reduced value.
+ * Reduces the input object using the reducer (and optional initial value)
+ * and return the reduced value.
  *
  *
  * @example

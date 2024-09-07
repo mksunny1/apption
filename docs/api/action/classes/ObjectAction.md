@@ -4,7 +4,7 @@
 
 [apption](../../modules.md) / [action](../README.md) / ObjectAction
 
-# Class: ObjectAction
+# Class: ObjectAction\<T, U\>
 
 Base class for actions on objects
 
@@ -14,11 +14,17 @@ Base class for actions on objects
 - [`SetAction`](SetAction.md)
 - [`DelAction`](DelAction.md)
 
+## Type Parameters
+
+• **T** *extends* `any`[] = `any`[]
+
+• **U** *extends* `any` = `any`
+
 ## Constructors
 
 ### new ObjectAction()
 
-> **new ObjectAction**(`map`): [`ObjectAction`](ObjectAction.md)
+> **new ObjectAction**\<`T`, `U`\>(`map`): [`ObjectAction`](ObjectAction.md)\<`T`, `U`\>
 
 #### Parameters
 
@@ -26,11 +32,11 @@ Base class for actions on objects
 
 #### Returns
 
-[`ObjectAction`](ObjectAction.md)
+[`ObjectAction`](ObjectAction.md)\<`T`, `U`\>
 
 #### Defined in
 
-[action.ts:261](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L261)
+[action.ts:277](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L277)
 
 ## Properties
 
@@ -40,4 +46,38 @@ Base class for actions on objects
 
 #### Defined in
 
-[action.ts:260](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L260)
+[action.ts:273](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L273)
+
+## Accessors
+
+### actor
+
+> `get` **actor**(): `any`
+
+The function equivalent of this action.
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[action.ts:283](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L283)
+
+## Methods
+
+### act()
+
+> **act**(...`args`): `U`
+
+#### Parameters
+
+• ...**args**: `T`
+
+#### Returns
+
+`U`
+
+#### Defined in
+
+[action.ts:274](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L274)

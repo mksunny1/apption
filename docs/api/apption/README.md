@@ -14,6 +14,12 @@ Re-exports [Action](../action/classes/Action.md)
 
 ***
 
+### Args
+
+Re-exports [Args](../action/classes/Args.md)
+
+***
+
 ### ArrayActions
 
 Re-exports [ArrayActions](../array/classes/ArrayActions.md)
@@ -74,15 +80,33 @@ Re-exports [IKey](../action/type-aliases/IKey.md)
 
 ***
 
+### ILike
+
+Re-exports [ILike](../middleware/type-aliases/ILike.md)
+
+***
+
 ### IMap
 
 Re-exports [IMap](../action/interfaces/IMap.md)
 
 ***
 
+### IOp
+
+Re-exports [IOp](../middleware/type-aliases/IOp.md)
+
+***
+
 ### IOperations
 
 Re-exports [IOperations](../action/type-aliases/IOperations.md)
+
+***
+
+### ITransformer
+
+Re-exports [ITransformer](../middleware/interfaces/ITransformer.md)
 
 ***
 
@@ -98,12 +122,6 @@ Re-exports [ObjectAction](../action/classes/ObjectAction.md)
 
 ***
 
-### Result
-
-Re-exports [Result](../action/classes/Result.md)
-
-***
-
 ### SetAction
 
 Re-exports [SetAction](../action/classes/SetAction.md)
@@ -113,6 +131,12 @@ Re-exports [SetAction](../action/classes/SetAction.md)
 ### act
 
 Re-exports [act](../action/functions/act.md)
+
+***
+
+### arg
+
+Re-exports [arg](../middleware/functions/arg.md)
 
 ***
 
@@ -152,6 +176,12 @@ Re-exports [mapValues](../object/functions/mapValues.md)
 
 ***
 
+### redirect
+
+Re-exports [redirect](../middleware/functions/redirect.md)
+
+***
+
 ### reduce
 
 Re-exports [reduce](../object/functions/reduce.md)
@@ -161,6 +191,12 @@ Re-exports [reduce](../object/functions/reduce.md)
 ### set
 
 Re-exports [set](../action/functions/set.md)
+
+***
+
+### transformer
+
+Re-exports [transformer](../middleware/functions/transformer.md)
 
 ***
 

@@ -1,5 +1,7 @@
 /**
- * Functionality related to selecting elements in the DOM.
+ * Objects that select and manipulate elements when their properties or methods are accessed
+ *
+ * @module
  */
 const selectorTrap = {
     get(target, p) {

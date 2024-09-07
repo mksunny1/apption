@@ -1,5 +1,7 @@
 /**
  * General app actions.
+ *
+ * @module
  */
 export type IKey = string | number | symbol;
 /**
@@ -39,10 +41,13 @@ export declare class Lazy<T> {
 export interface IAction<T extends any[], U = any> {
     act(...args: T): U;
 }
-type IConcreteOperation = ICallable | IOperations | Action;
 /**
  * Represents a function, Action or array containing these and/or similar arrays.
  * May also be an instance of `Lazy` which resolves to the aforementioned.
+ */
+export type IConcreteOperation = ICallable | IOperations | Action;
+/**
+ * An {@link IConcreteOperation} or a {@link Lazy} that returns one.
  */
 export type IOperations = Array<IConcreteOperation | Lazy<IConcreteOperation>>;
 /**
@@ -66,17 +71,17 @@ export type IActionMap = IActionMapObject | Lazy<IActionMapObject>;
  * passing the same argument list to all the functions, but may perhaps be desired for some reason.
  *
  * @example
- * import { act, Result } from 'apption'
+ * import { act, Args } from 'apption'
  * let count = 0;
  * act([
  *     (a1, a2) => count += a1,
- *     (a1, a2) => new Result([a2, 0]),
+ *     (a1, a2) => new Args([a2, 0]),
  *     (a1, a2) => count += a2 + 5
  * ], 20, 21);
  * console.log(count);   // 25
  *
  */
-export declare class Result {
+export declare class Args {
     value: any[];
     constructor(value: any[]);
 }
@@ -181,15 +186,31 @@ export declare class Action implements IAction<any[], (any[] | void)> {
     operations: IOperations | Lazy<IOperations>;
     constructor(operations: IOperations | Lazy<IOperations>);
     act(...args: any[]): any[] | void;
+    /**
+     * The function equivalent of this action.
+     * @example
+     * import { CallAction } from 'apption'
+     * let arr1 = [1, 2, 3], arr2 = [1, 2, 3];
+     * const action = new CallAction({ push: [arr1], unshift: [arr2] }).actor;
+     * action(20, 21);
+     * console.log(arr1)   // [1, 2, 3, 20, 21]
+     * console.log(arr2)   // [20, 21, 1, 2, 3]
+     */
+    get actor(): any;
 }
 /**
  * Base class for actions on objects
  */
-export declare class ObjectAction {
+export declare class ObjectAction<T extends any[] = any[], U extends any = any> {
     map: IActionMap;
+    act(...args: T): U;
     constructor(map: {
         [key: string | number]: any[];
     });
+    /**
+     * The function equivalent of this action.
+     */
+    get actor(): any;
 }
 /**
  * A wrapper around {@link call} to store the map. The map can be an instance
@@ -238,5 +259,4 @@ export declare class SetAction extends ObjectAction implements IAction<[any, any
 export declare class DelAction extends ObjectAction implements IAction<any[], any> {
     act(...args: any[]): void;
 }
-export {};
 //# sourceMappingURL=action.d.ts.map

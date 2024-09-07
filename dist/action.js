@@ -1,5 +1,7 @@
 /**
  * General app actions.
+ *
+ * @module
  */
 /**
  * Wraps a function that returns a real value to work with when an action is triggered.
@@ -30,17 +32,17 @@ export class Lazy {
  * passing the same argument list to all the functions, but may perhaps be desired for some reason.
  *
  * @example
- * import { act, Result } from 'apption'
+ * import { act, Args } from 'apption'
  * let count = 0;
  * act([
  *     (a1, a2) => count += a1,
- *     (a1, a2) => new Result([a2, 0]),
+ *     (a1, a2) => new Args([a2, 0]),
  *     (a1, a2) => count += a2 + 5
  * ], 20, 21);
  * console.log(count);   // 25
  *
  */
-export class Result {
+export class Args {
     constructor(value) {
         this.value = value;
     }
@@ -85,7 +87,7 @@ export function act(operations, ...args) {
             result = operation.act(...args);
         else
             result = operation(...args);
-        if (result instanceof Result)
+        if (result instanceof Args)
             args = result.value;
     }
     return result;
@@ -117,7 +119,7 @@ export function call(map, ...args) {
             if (object instanceof Lazy)
                 object = object.value(key, ...args);
             result = object[key](...args);
-            if (result instanceof Result)
+            if (result instanceof Args)
                 args = result.value;
         }
     }
@@ -202,13 +204,35 @@ export class Action {
     act(...args) {
         return act(this.operations instanceof Lazy ? this.operations.value(...args) : this.operations, ...args);
     }
+    /**
+     * The function equivalent of this action.
+     * @example
+     * import { CallAction } from 'apption'
+     * let arr1 = [1, 2, 3], arr2 = [1, 2, 3];
+     * const action = new CallAction({ push: [arr1], unshift: [arr2] }).actor;
+     * action(20, 21);
+     * console.log(arr1)   // [1, 2, 3, 20, 21]
+     * console.log(arr2)   // [20, 21, 1, 2, 3]
+     */
+    get actor() {
+        return this.act.bind(this);
+    }
 }
 /**
  * Base class for actions on objects
  */
 export class ObjectAction {
+    act(...args) {
+        return;
+    }
     constructor(map) {
         this.map = map;
+    }
+    /**
+     * The function equivalent of this action.
+     */
+    get actor() {
+        return this.act.bind(this);
     }
 }
 /**

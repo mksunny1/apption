@@ -43,7 +43,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:248](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L248)
+[action.ts:248](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L248)
 
 ## Properties
 
@@ -53,7 +53,34 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:247](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L247)
+[action.ts:247](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L247)
+
+## Accessors
+
+### actor
+
+> `get` **actor**(): `any`
+
+The function equivalent of this action.
+
+#### Example
+
+```ts
+import { CallAction } from 'apption'
+let arr1 = [1, 2, 3], arr2 = [1, 2, 3];
+const action = new CallAction({ push: [arr1], unshift: [arr2] }).actor;
+action(20, 21);
+console.log(arr1)   // [1, 2, 3, 20, 21]
+console.log(arr2)   // [20, 21, 1, 2, 3]
+```
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[action.ts:264](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L264)
 
 ## Methods
 
@@ -75,4 +102,4 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:251](https://github.com/mksunny1/apption/blob/f3b5d5c3614cab7eb977eb2c318ddd94377b693c/src/action.ts#L251)
+[action.ts:251](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L251)

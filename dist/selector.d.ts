@@ -1,5 +1,7 @@
 /**
- * Functionality related to selecting elements in the DOM.
+ * Objects that select and manipulate elements when their properties or methods are accessed
+ *
+ * @module
  */
 /**
  * Returns a selection object that lazily represents an element within the `treespace` element (or document).

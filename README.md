@@ -44,12 +44,13 @@ call({ push: actions }, { id: 1, lbl: 'First item' }, { id: 2, lbl: 'Second item
 
 ## Documentation
 
-The library is divided into 4 parts. [Action](./docs/api/action//README.md) contains the main primitives. The other 3 contain specialized objects which work very well with [action](./docs/api/action//README.md). They can also be used on their own. Use the following links for the API documentation of each part. Each contains only a few functions and classes.
+The library is divided into 5 parts. [Action](./docs/api/action//README.md) contains the main primitives. The other 3 contain specialized objects which work very well with [action](./docs/api/action//README.md). They can also be used on their own. Use the following links for the API documentation of each part. Each contains only a few functions and classes.
  
  1. The base [action](./docs/api/action/README.md) module which exports primitives for acting on multiple objects at once. It is similar to `onetomany` in [deleight](https://github.com/mksunny1/deleight) but a lot easier to use and likely has more practical utility.
  2. The [array](./docs/api/array/README.md) module which exports 2 classes that function together to keep array objects and the children of DOM elements in sync. This is preferrable to using `for` loops within markup. It can be used directly (in most cases) or serve as a basis for developing bespoke solutions for more uncommon situations.
  3. The [object](./docs/api/object/README.md) module which supports more concise object manipulations. It borrows some ideas from functional programming. We found this convenient because we use objects a lot in JavaScript code.
  4. The [selector](./docs/api/selector/README.md) module which exports new object types for easier and more concise DOM manipulations.
+ 5. The [middleware](./docs/api/middleware/README.md) module which exports primitives that proxy other objects to perform preset transformations or computations before and/or after members are accessed.
 
 
 ## Contributing
