@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { Selector, selector, MemberSelector, member, AttrSelector, attr, MethodSelector, method } from '../dist/selector.js'
+import { Selector, selector, MemberSelector, member, AttrSelector, attr, MethodSelector, method } from '../src/selector.js'
 import { JSDOM } from "jsdom";
 
 const window = new JSDOM(`<!DOCTYPE html><body></body>`).window;

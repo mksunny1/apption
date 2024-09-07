@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { ArrayActions, ChildrenActions } from '../dist/array.js'
+import { ArrayActions, ChildrenActions } from '../src/array.js'
 import { JSDOM } from "jsdom";
 
 const window = new JSDOM(`<!DOCTYPE html><body></body>`).window;

@@ -1,7 +1,7 @@
 
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { act, call, set, del, Action, CallAction, SetAction, DelAction, Lazy, Args } from '../dist/action.js'
+import { act, call, set, del, Action, CallAction, SetAction, DelAction, Lazy, Args } from '../src/action.js'
 
 
 describe('action.act', async t1 => {

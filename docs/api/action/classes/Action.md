@@ -43,7 +43,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:248](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L248)
+[action.ts:248](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L248)
 
 ## Properties
 
@@ -53,7 +53,7 @@ console.log(count);   // 63
 
 #### Defined in
 
-[action.ts:247](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L247)
+[action.ts:247](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L247)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ console.log(arr2)   // [20, 21, 1, 2, 3]
 
 #### Defined in
 
-[action.ts:264](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L264)
+[action.ts:264](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L264)
 
 ## Methods
 
@@ -102,4 +102,4 @@ console.log(arr2)   // [20, 21, 1, 2, 3]
 
 #### Defined in
 
-[action.ts:251](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L251)
+[action.ts:251](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L251)

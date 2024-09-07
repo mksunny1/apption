@@ -13,15 +13,29 @@ which are flexible, clean, well structured, fast, memory-efficient, easy to unde
 
 `npm i apption`
 
+## Importing
+
+### NPM
+
+#### ES Modules
+
 ```js
-import { call, ArrayActions, ChildrenActions } from 'apption';
+import { call, ArrayActions, ChildrenActions, redirect } from 'apption';
+import { call } from 'apption/action';
 ```
 
-### CDN
+#### CommonJS
 
 ```js
-import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action.min.js';
-import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array.min.js';
+const apption = require('apption');
+const array = require('apption/array');
+```
+
+#### Directly from a CDN
+
+```js
+import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action/esm/action.min.js';
+import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array/esm/array.min.js';
 ```
 
 ## Usage
@@ -51,7 +65,7 @@ The library is divided into 5 parts. [Action](_media/README.md) contains the mai
  2. The [array](_media/README-1.md) module which exports 2 classes that function together to keep array objects and the children of DOM elements in sync. This is preferrable to using `for` loops within markup. It can be used directly (in most cases) or serve as a basis for developing bespoke solutions for more uncommon situations.
  3. The [object](_media/README-2.md) module which supports more concise object manipulations. It borrows some ideas from functional programming. We found this convenient because we use objects a lot in JavaScript code.
  4. The [selector](_media/README-3.md) module which exports new object types for easier and more concise DOM manipulations.
- 5. The [middleware](./docs/api/middleware/README.md) module which exports primitives that proxy other objects to perform preset transformations or computations before and/or after members are accessed.
+ 5. The [middleware](_media/README-4.md) module which exports primitives that proxy other objects to perform preset transformations or computations before and/or after members are accessed.
 
 ## Contributing
 

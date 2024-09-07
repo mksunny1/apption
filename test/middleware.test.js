@@ -2,7 +2,7 @@
 
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { transformer, arg, redirect } from '../dist/middleware.js'
+import { transformer, arg, redirect } from '../src/middleware.js'
 
 describe('middleware.transformer', async t1 => {
     await it('Should correctly transform on get', async t2 => {

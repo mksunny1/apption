@@ -48,7 +48,7 @@ console.log(obj2);    // { a: 1, c: 3}
 
 #### Defined in
 
-[action.ts:277](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L277)
+[action.ts:277](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L277)
 
 ## Properties
 
@@ -62,7 +62,7 @@ console.log(obj2);    // { a: 1, c: 3}
 
 #### Defined in
 
-[action.ts:273](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L273)
+[action.ts:273](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L273)
 
 ## Accessors
 
@@ -82,7 +82,7 @@ The function equivalent of this action.
 
 #### Defined in
 
-[action.ts:283](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L283)
+[action.ts:283](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L283)
 
 ## Methods
 
@@ -108,4 +108,4 @@ The function equivalent of this action.
 
 #### Defined in
 
-[action.ts:339](https://github.com/mksunny1/apption/blob/ae95a8119448c604f1b19ab341a5639f3c56f4f4/src/action.ts#L339)
+[action.ts:339](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/action.ts#L339)

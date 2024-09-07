@@ -10,15 +10,30 @@ which are flexible, clean, well structured, fast, memory-efficient, easy to unde
 
 `npm i apption`
 
+
+## Importing
+
+### NPM
+
+#### ES Modules
+
 ```js
-import { call, ArrayActions, ChildrenActions } from 'apption';
+import { call, ArrayActions, ChildrenActions, redirect } from 'apption';
+import { call } from 'apption/action';
 ```
 
-### CDN
+#### CommonJS
 
 ```js
-import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action.min.js';
-import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array.min.js';
+const apption = require('apption');
+const array = require('apption/array');
+```
+
+#### Directly from a CDN
+
+```js
+import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action/esm/action.min.js';
+import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array/esm/array.min.js';
 ```
 
 

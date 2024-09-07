@@ -1,22 +1,41 @@
 {
   "name": "apption",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "description": "A simple library for creating modern interactive applications",
-  "main": "dist/apption.js",
   "files": [
     "dist/*"
   ],
   "type": "module",
-  "types": "./dist/apption.d.ts",
   "exports": {
     ".": {
-      "default": "./dist/apption.js"
+      "require": "./dist/apption/cjs/apption.js",
+      "default": "./dist/apption/esm/apption.js"
+    },
+    "./action": {
+      "require": "./dist/action/cjs/action.js",
+      "default": "./dist/action/esm/action.js"
+    },
+    "./object": {
+      "require": "./dist/object/cjs/object.js",
+      "default": "./dist/object/esm/object.js"
+    },
+    "./array": {
+      "require": "./dist/array/cjs/aray.js",
+      "default": "./dist/array/esm/array.js"
+    },
+    "./selector": {
+      "require": "./dist/selector/cjs/selector.js",
+      "default": "./dist/selector/esm/selector.js"
+    },
+    "./middleware": {
+      "require": "./dist/middleware/cjs/middleware.js",
+      "default": "./dist/middleware/esm/middleware.js"
     }
   },
   "scripts": {
     "test": "node --test",
     "doc": "npx typedoc --plugin typedoc-plugin-markdown --out ./docs/api ./src/*.ts",
-    "build": "npx tsc"
+    "build": "npx tsc && rollup -c"
   },
   "repository": {
     "type": "git",
@@ -41,7 +60,10 @@
   },
   "homepage": "https://github.com/mksunny1/apption#readme",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "jsdom": "^24.1.1",
+    "rollup": "^4.21.2",
+    "rollup-plugin-dts": "^6.1.1",
     "typedoc": "^0.26.1",
     "typedoc-plugin-markdown": "^4.1.0",
     "typescript": "^5.5.2"

@@ -2,7 +2,7 @@
 
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { zip, map, mapKeys, mapValues, reduce, foreach } from '../dist/object.js'
+import { zip, map, mapKeys, mapValues, reduce, foreach } from '../src/object.js'
 
 describe('object.zip', async t1 => {
     await it('Should combine arrays of keys and values', async t2 => {
