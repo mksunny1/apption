@@ -26,6 +26,12 @@ Re-exports [ArrayActions](../array/classes/ArrayActions.md)
 
 ***
 
+### AttrSelector
+
+Re-exports [AttrSelector](../selector/classes/AttrSelector.md)
+
+***
+
 ### CallAction
 
 Re-exports [CallAction](../action/classes/CallAction.md)
@@ -116,9 +122,27 @@ Re-exports [Lazy](../action/classes/Lazy.md)
 
 ***
 
+### MemberSelector
+
+Re-exports [MemberSelector](../selector/classes/MemberSelector.md)
+
+***
+
+### MethodSelector
+
+Re-exports [MethodSelector](../selector/classes/MethodSelector.md)
+
+***
+
 ### ObjectAction
 
 Re-exports [ObjectAction](../action/classes/ObjectAction.md)
+
+***
+
+### Selector
+
+Re-exports [Selector](../selector/classes/Selector.md)
 
 ***
 
@@ -137,6 +161,12 @@ Re-exports [act](../action/functions/act.md)
 ### arg
 
 Re-exports [arg](../middleware/functions/arg.md)
+
+***
+
+### attr
+
+Re-exports [attr](../selector/functions/attr.md)
 
 ***
 
@@ -176,6 +206,18 @@ Re-exports [mapValues](../object/functions/mapValues.md)
 
 ***
 
+### member
+
+Re-exports [member](../selector/functions/member.md)
+
+***
+
+### method
+
+Re-exports [method](../selector/functions/method.md)
+
+***
+
 ### redirect
 
 Re-exports [redirect](../middleware/functions/redirect.md)
@@ -185,6 +227,12 @@ Re-exports [redirect](../middleware/functions/redirect.md)
 ### reduce
 
 Re-exports [reduce](../object/functions/reduce.md)
+
+***
+
+### selector
+
+Re-exports [selector](../selector/functions/selector.md)
 
 ***
 

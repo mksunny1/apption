@@ -53,7 +53,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:113](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L113)
+[selector.ts:113](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L113)
 
 ## Properties
 
@@ -67,7 +67,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:112](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L112)
+[selector.ts:112](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L112)
 
 ***
 
@@ -81,7 +81,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:42](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L42)
+[selector.ts:42](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L42)
 
 ## Methods
 
@@ -103,7 +103,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:181](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L181)
+[selector.ts:181](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L181)
 
 ***
 
@@ -125,7 +125,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:175](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L175)
+[selector.ts:175](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L175)
 
 ***
 
@@ -149,4 +149,4 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:178](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L178)
+[selector.ts:178](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L178)

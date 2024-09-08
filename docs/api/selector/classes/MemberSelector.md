@@ -57,7 +57,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:113](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L113)
+[selector.ts:113](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L113)
 
 ## Properties
 
@@ -67,7 +67,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:112](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L112)
+[selector.ts:112](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L112)
 
 ***
 
@@ -81,7 +81,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:42](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L42)
+[selector.ts:42](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L42)
 
 ## Methods
 
@@ -103,7 +103,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:123](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L123)
+[selector.ts:123](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L123)
 
 ***
 
@@ -125,7 +125,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:117](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L117)
+[selector.ts:117](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L117)
 
 ***
 
@@ -149,4 +149,4 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:120](https://github.com/mksunny1/apption/blob/3f2288c24fed7fc1effebf2fdac51656d2dda91c/src/selector.ts#L120)
+[selector.ts:120](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L120)
