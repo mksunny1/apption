@@ -19,14 +19,18 @@ describe("selector.Selector", () => {
     <p>I am a paragraph</p>
     <section>I am a section</section>
     <article>I am an article</article>
+    <main>
+        <p>P in MAIN</p>
+    </main>
     `;
         const slct = new Selector(body);
         assert.equal(slct.get('div').textContent, 'I am a div')
         assert.equal(slct.get('p').textContent, 'I am a paragraph')
         assert.equal(slct.get('article').textContent, 'I am an article')
+        assert.equal(slct.get('main & p').textContent, 'P in MAIN')
         assert.equal(slct.get('section').textContent, 'I am a section')
         assert.equal(slct.get(1).textContent, 'I am a paragraph')
-        assert.equal(slct.get(-1).textContent, 'I am an article')
+        assert.equal(slct.get(-2).textContent, 'I am an article')
     });
 
     it("Should set the correct element", (t) => {

@@ -22,9 +22,13 @@ document.body.innerHTML = `
 <p>I am a paragraph</p>
 <section>I am a section</section>
 <article>I am an article</article>
+<main>
+     <p>P in MAIN</p>
+</main>
 `;
 const slct = new Selector(document.body);
 console.log(slct.get('article').textContent);  // I am an article
+console.log(slct.get('main & p').textContent);  // P in MAIN
 ```
 
 ## Extended by
@@ -48,7 +52,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:43](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L43)
+[selector.ts:47](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L47)
 
 ## Properties
 
@@ -58,7 +62,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:42](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L42)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L46)
 
 ## Methods
 
@@ -76,7 +80,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:58](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L58)
+[selector.ts:74](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L74)
 
 ***
 
@@ -94,7 +98,7 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L46)
+[selector.ts:50](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L50)
 
 ***
 
@@ -114,4 +118,4 @@ console.log(slct.get('article').textContent);  // I am an article
 
 #### Defined in
 
-[selector.ts:51](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L51)
+[selector.ts:67](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L67)

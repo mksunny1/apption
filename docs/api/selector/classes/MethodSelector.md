@@ -53,7 +53,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:234](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L234)
+[selector.ts:250](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L250)
 
 ## Properties
 
@@ -63,7 +63,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:233](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L233)
+[selector.ts:249](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L249)
 
 ***
 
@@ -77,7 +77,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:42](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L42)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L46)
 
 ## Methods
 
@@ -97,7 +97,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:238](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L238)
+[selector.ts:254](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L254)
 
 ***
 
@@ -119,7 +119,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:58](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L58)
+[selector.ts:74](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L74)
 
 ***
 
@@ -141,7 +141,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L46)
+[selector.ts:50](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L50)
 
 ***
 
@@ -165,4 +165,4 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:51](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/selector.ts#L51)
+[selector.ts:67](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L67)

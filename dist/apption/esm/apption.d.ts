@@ -440,9 +440,13 @@ declare function foreach(object: any, callable: ICallable): void;
  * <p>I am a paragraph</p>
  * <section>I am a section</section>
  * <article>I am an article</article>
+ * <main>
+ *      <p>P in MAIN</p>
+ * </main>
  * `;
  * const slct = new Selector(document.body);
  * console.log(slct.get('article').textContent);  // I am an article
+ * console.log(slct.get('main & p').textContent);  // P in MAIN
  *
  */
 declare class Selector {

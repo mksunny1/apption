@@ -44,4 +44,4 @@ console.log(red.d)     // 3
 
 ## Defined in
 
-[middleware.ts:178](https://github.com/mksunny1/apption/blob/76ef749a5be7d197c14269d0b969e6bfc0fc29cb/src/middleware.ts#L178)
+[middleware.ts:178](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/middleware.ts#L178)

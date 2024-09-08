@@ -33,9 +33,13 @@ const selectorTrap = {
  * <p>I am a paragraph</p>
  * <section>I am a section</section>
  * <article>I am an article</article>
+ * <main>
+ *      <p>P in MAIN</p>
+ * </main>
  * `;
  * const slct = new Selector(document.body);
  * console.log(slct.get('article').textContent);  // I am an article
+ * console.log(slct.get('main & p').textContent);  // P in MAIN
  * 
  */
 export class Selector {
@@ -44,9 +48,21 @@ export class Selector {
         if (treespace) this.treespace = treespace;
     }
     get(key: any): any {
-        const element = this.treespace || document;
-        if (typeof key === 'string') return element.querySelector(key);
-        else if (typeof key === 'number') return element.children[key>= 0? key: element.children.length + key];
+        let element = this.treespace || document;
+        if (typeof key === "number") return element.children[key>= 0? key: element.children.length + key];
+        if (typeof key !== 'string') return;    // not handled here.
+
+        const selectors =  (typeof key === 'string' && key.indexOf('&') >= 0)? key.split('&'): [key];
+        let nKey: number;
+        for (let key of selectors) {
+            key = key.trim();
+            nKey = parseInt(key);
+
+            if (isNaN(nKey)) {   
+                element = element.querySelector(key);
+            } else element = element.children[nKey>= 0? nKey: element.children.length + nKey];
+        }
+        return element;
     }
     set(key: any, value: any) {
         const currentElement: Element | null | undefined = this.get(key);

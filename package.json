@@ -1,6 +1,6 @@
 {
   "name": "apption",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "A simple library for creating modern interactive applications",
   "files": [
     "dist/*"
