@@ -12,4 +12,4 @@ An [IConcreteOperation](IConcreteOperation.md) or a [Lazy](../classes/Lazy.md) t
 
 ## Defined in
 
-[action.ts:63](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/action.ts#L63)
+[action.ts:43](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/action.ts#L43)

@@ -28,11 +28,13 @@
  *
  */
 declare class Selector {
+    #private;
     treespace?: Element;
     constructor(treespace?: Element);
     get(key: any): any;
     set(key: any, value: any): void;
     delete(key: any): void;
+    proxy(): any;
 }
 /**
  * Returns a proxy object that selects an element when a property is requested from it.
@@ -55,10 +57,9 @@ declare class Selector {
  *
  *
  * @param treespace
- * @param cls
  * @returns
  */
-declare function selector(treespace?: Element, cls?: typeof Selector): Selector;
+declare function selector(treespace?: Element): any;
 /**
  * Returns a selection object that lazily represents a property with the name within the `treespace` element (or document).
  * Calling [get]{@link MemberSelector#get} returns the property in the specified element.
@@ -105,10 +106,9 @@ declare class MemberSelector extends Selector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-declare function member(name: string, treespace?: Element, cls?: typeof MemberSelector): Selector;
+declare function member(name: string, treespace?: Element): any;
 /**
  * Returns a selection object that lazily represents an attribute with the name within the `treespace` element (or document).
  * Calling [get]{@link AttrSelector#get} returns the attribute in the specified element.
@@ -153,10 +153,9 @@ declare class AttrSelector extends MemberSelector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-declare function attr(name: string, treespace?: Element, cls?: typeof AttrSelector): Selector;
+declare function attr(name: string, treespace?: Element): any;
 /**
  * Returns a selection object that lazily represents a method with the name within the `treespace` element (or document).
  * Invoking [call]{@link AttrSelector#get} will call the corresponding method on the
@@ -178,9 +177,11 @@ declare function attr(name: string, treespace?: Element, cls?: typeof AttrSelect
  *
  */
 declare class MethodSelector extends Selector {
+    #private;
     name: string;
     constructor(name: string, treespace?: Element);
     call(key: any, ...args: any[]): any;
+    proxy(): any;
 }
 /**
  * Returns an object that lazily represents a method with the name within the `treespace` (or document).
@@ -201,9 +202,8 @@ declare class MethodSelector extends Selector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-declare function method(name: string, treespace?: Element, cls?: typeof MethodSelector): MethodSelector;
+declare function method(name: string, treespace?: Element): any;
 
 export { AttrSelector, MemberSelector, MethodSelector, Selector, attr, member, method, selector };

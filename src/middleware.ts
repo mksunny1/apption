@@ -1,13 +1,11 @@
 /**
- * 
- * This module exports functions that wrap objects to perform many useful 
- * transformations when their properties are fetched (get), set or deleted.
+ * Objects that transform values before they are sent to/from objects they wrap.
  * 
  * @module
  */
 
-type ICallable = (...args: any[])=> any;   // already exported elsewhere!
-type IKey = string | number | symbol  // already exported elsewhere!
+import { IKey, ICallable } from "./types";
+
 
 export interface ITransformer {
     /**
@@ -37,7 +35,25 @@ export interface ITransformer {
 }
 
 const transformerTrap = {
-    get([object, trans]: [any, ITransformer], p: IKey) {
+    get(transformer: Transformer<any>, p: IKey) {
+        return transformer.get(p);
+    },
+    set(transformer: Transformer<any>, p: IKey, value: any) {
+        transformer.set(p, value);
+        return true;
+    },
+}
+
+export class Transformer<T> {
+    object: T;
+    trans: ITransformer;
+    #proxy?: T;
+    constructor(object: T, trans: ITransformer) {
+        this.object = object;
+        this.trans = trans;
+    }
+    get(p: IKey) {
+        const { object, trans } = this;
         const result = object[p];
         if (result instanceof Function) {  // method
             return (...args: any[]) => {
@@ -48,12 +64,16 @@ const transformerTrap = {
             }
         }
         return (trans && trans.get)? trans.get(p, result): result;
-    },
-    set([object, trans]: [any, ITransformer], p: IKey, value: any) {
+    }
+    set(p: IKey, value: any) {
+        const { object, trans } = this;
         if (trans && trans.set) value = trans.set(p, value);
         object[p] = value;
-        return true;
-    },
+    }
+    proxy(): T {
+        if (!this.#proxy) this.#proxy = new Proxy(this, transformerTrap) as unknown as T;
+        return this.#proxy;
+    }
 }
 
 /**
@@ -73,23 +93,46 @@ const transformerTrap = {
  * @returns 
  */
 export function transformer<T>(object: T, trans: ITransformer): T {
-    return new Proxy([object, trans], transformerTrap) as T;
+    return new Transformer(object, trans).proxy() as T;
 }
 
 const argTrap = {
-    get([object, fn]: [any, ICallable], p: IKey) {
-        fn(object);
-        return object[p];
+    get(arg: Arg<any>, p: IKey) {
+        return arg.get(p);
     },
-    set([object, fn]: [any, ICallable], p: IKey, value: any) {
-        object[p] = value;
-        fn(object);
+    set(arg: Arg<any>, p: IKey, value: any) {
+        arg.set(p, value);
         return true;
     },
-    deleteProperty([object, fn]: [any, ICallable], p: IKey) {
-        delete object[p];
-        fn(object);
+    deleteProperty(arg: Arg<any>, p: IKey) {
+        arg.delete(p)
         return true;
+    }
+}
+
+export class Arg<T> {
+    object: T;
+    fn: ICallable;
+    #proxy?: T;
+    constructor(object: T, fn: ICallable) {
+        this.object = object;
+        this.fn = fn;
+    }
+    get(p: IKey) {
+        this.fn(this.object);
+        return this.object[p];
+    }
+    set(p: IKey, value: any) {
+        this.object[p] = value;
+        return this.fn(this.object);
+    }
+    delete(p: IKey) {
+        delete this.object[p];
+        return this.fn(this.object);
+    }
+    proxy(): T {
+        if (!this.#proxy) this.#proxy = new Proxy(this, argTrap) as unknown as T;
+        return this.#proxy;
     }
 }
 
@@ -116,7 +159,7 @@ const argTrap = {
  * @param fn 
  */
 export function arg<T>(object: T, fn: ((...args: any[])=> any)): T {
-    return new Proxy([object, fn], argTrap) as T;
+    return new Arg(object, fn).proxy() as T;
 }
 
 export type ILike<T, U=any> = {
@@ -128,8 +171,31 @@ export type IOp<T> = {
 }
 
 const redirectTrap = {
-    get([map, remap]: [any, ITransformer], p: IKey) {
-        let q = remap?.[p];
+    get(red: Redirect<any>, p: IKey) {
+        return red.get(p);
+    },
+    set(red: Redirect<any>, p: IKey, value: any) {
+        red.set(p, value);
+        return true;
+    },
+    deleteProperty(red: Redirect<any>, p: IKey) {
+        red.delete(p);
+        return true;
+    }
+}
+
+
+export class Redirect<T> {
+    map: T;
+    remap?: IOp<ILike<T, IKey>>;
+    #proxy?: T;
+    constructor(map: T, remap?: IOp<ILike<T, IKey>>) {
+        this.map = map;
+        if (remap) this.remap = remap;
+    }
+    get(p: IKey) {
+        const {map, remap} = this;
+        let q: IKey = (typeof p !== 'symbol')? remap?.[p]: undefined;
         if (q === undefined) q = p;
         const object = map[p]
         const result = object[q];
@@ -137,20 +203,24 @@ const redirectTrap = {
             return (...args: any[]) =>  result.apply(object, args);
         }
         return result;
-    },
-    set([map, remap]: [any, ITransformer], p: IKey, value: any) {
-        let q = remap?.[p];
+    }
+    set(p: IKey, value: any) {
+        const {map, remap} = this;
+        let q: IKey = (typeof p !== 'symbol')? remap?.[p]: undefined;
         if (q === undefined) q = p;
         const object = map[p]
         object[q] = value;
-        return true;
-    },
-    deleteProperty([map, remap]: [any, ITransformer], p: IKey) {
-        let q = remap?.[p];
+    }
+    delete(p: IKey) {
+        const {map, remap} = this;
+        let q: IKey = (typeof p !== 'symbol')? remap?.[p]: undefined;
         if (q === undefined) q = p;
         const object = map[p]
         delete object[q];
-        return true;
+    }
+    proxy(): T {
+        if (!this.#proxy) this.#proxy = new Proxy(this, redirectTrap) as unknown as T;
+        return this.#proxy;
     }
 }
 
@@ -176,6 +246,6 @@ const redirectTrap = {
  * @param remap
  */
 export function redirect<T>(map: T, remap?: IOp<ILike<T, string>>): ILike<T> {
-    return new Proxy([map, remap], redirectTrap) as ILike<T>;
+    return new Redirect(map, remap).proxy() as ILike<T>;
 }
 

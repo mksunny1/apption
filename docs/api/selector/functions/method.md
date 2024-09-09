@@ -6,7 +6,7 @@
 
 # Function: method()
 
-> **method**(`name`, `treespace`?, `cls`?): [`MethodSelector`](../classes/MethodSelector.md)
+> **method**(`name`, `treespace`?): `any`
 
 Returns an object that lazily represents a method with the name within the `treespace` (or document).
 Calling its methods calls the corresponding method in the specified element.
@@ -17,11 +17,9 @@ Calling its methods calls the corresponding method in the specified element.
 
 • **treespace?**: `Element`
 
-• **cls?**: *typeof* [`MethodSelector`](../classes/MethodSelector.md) = `MethodSelector`
-
 ## Returns
 
-[`MethodSelector`](../classes/MethodSelector.md)
+`any`
 
 ## Example
 
@@ -40,4 +38,4 @@ console.log(document.querySelector('section'));  // null
 
 ## Defined in
 
-[selector.ts:286](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L286)
+[selector.ts:292](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L292)

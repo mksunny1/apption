@@ -1,21 +1,10 @@
 /**
- * General app actions.
- *
- * @module
- */
-type IKey = string | number | symbol;
-/**
  * Represents any function
  */
 interface ICallable {
     (...args: any[]): any;
 }
-/**
- * Represents any object with values of type T.
- */
-interface IMap<T> {
-    [key: IKey]: T;
-}
+
 /**
  * Wraps a function that returns a real value to work with when an action is triggered.
  * ALl actions exported by this module ({@link act}, {@link call}, {@link set}, {@link del})
@@ -260,4 +249,4 @@ declare class DelAction extends ObjectAction implements IAction<any[], any> {
     act(...args: any[]): void;
 }
 
-export { Action, Args, CallAction, DelAction, type IAction, type IActionMap, type IActionMapObject, type ICallable, type IConcreteOperation, type IKey, type IMap, type IOperations, Lazy, ObjectAction, SetAction, act, call, del, set };
+export { Action, Args, CallAction, DelAction, type IAction, type IActionMap, type IActionMapObject, type IConcreteOperation, type IOperations, Lazy, ObjectAction, SetAction, act, call, del, set };

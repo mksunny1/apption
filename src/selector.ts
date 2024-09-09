@@ -44,6 +44,7 @@ const selectorTrap = {
  */
 export class Selector {
     treespace?: Element;
+    #proxy?: any;
     constructor(treespace?: Element) {
         if (treespace) this.treespace = treespace;
     }
@@ -75,6 +76,10 @@ export class Selector {
         const currentElement: Element | null | undefined = this.get(key);
         if (currentElement) currentElement.remove();
     }
+    proxy() {
+        if (!this.#proxy) this.#proxy = new Proxy(this, selectorTrap);
+        return this.#proxy;
+    }
 }
 /**
  * Returns a proxy object that selects an element when a property is requested from it. 
@@ -97,11 +102,10 @@ export class Selector {
  * 
  * 
  * @param treespace 
- * @param cls 
  * @returns 
  */
-export function selector(treespace?: Element, cls = Selector) {
-    return new Proxy(new cls(treespace), selectorTrap);
+export function selector(treespace?: Element) {
+    return new Selector(treespace).proxy();
 }
 
 /**
@@ -160,11 +164,10 @@ export class MemberSelector extends Selector {
  * 
  * @param name 
  * @param treespace 
- * @param cls 
  * @returns 
  */
-export function member(name: string, treespace?: Element, cls = MemberSelector) {
-    return new Proxy(new cls(name, treespace), selectorTrap);
+export function member(name: string, treespace?: Element) {
+    return new MemberSelector(name, treespace).proxy();
 }
 
 /**
@@ -218,11 +221,10 @@ export class AttrSelector extends MemberSelector {
  * 
  * @param name 
  * @param treespace 
- * @param cls 
  * @returns 
  */
-export function attr(name: string, treespace?: Element, cls = AttrSelector) {
-    return member(name, treespace, cls || AttrSelector);
+export function attr(name: string, treespace?: Element) {
+    return new AttrSelector(name, treespace).proxy();
 }
 
 /**
@@ -247,12 +249,17 @@ export function attr(name: string, treespace?: Element, cls = AttrSelector) {
  */
 export class MethodSelector extends Selector {
     name: string;
+    #proxy?: any;
     constructor(name: string, treespace?: Element) {
         super(treespace);
         this.name = name;
     }
     call(key: any, ...args: any[]) {
         return super.get(key)?.[this.name](...args);
+    }
+    proxy() {
+        if (!this.#proxy) this.#proxy = new Proxy(this, methodSelectorTrap);
+        return this.#proxy;
     }
 }
 const methodSelectorTrap = {
@@ -280,10 +287,9 @@ const methodSelectorTrap = {
  * 
  * @param name 
  * @param treespace 
- * @param cls 
  * @returns 
  */
-export function method(name: string, treespace?: Element, cls = MethodSelector) {
-    return new Proxy(new cls(name, treespace), methodSelectorTrap);
+export function method(name: string, treespace?: Element) {
+    return new MethodSelector(name, treespace).proxy();
 }
 

@@ -6,8 +6,6 @@
 
 # action
 
-General app actions.
-
 ## Index
 
 ### Classes
@@ -23,15 +21,12 @@ General app actions.
 ### Interfaces
 
 - [IAction](interfaces/IAction.md)
-- [ICallable](interfaces/ICallable.md)
-- [IMap](interfaces/IMap.md)
 
 ### Type Aliases
 
 - [IActionMap](type-aliases/IActionMap.md)
 - [IActionMapObject](type-aliases/IActionMapObject.md)
 - [IConcreteOperation](type-aliases/IConcreteOperation.md)
-- [IKey](type-aliases/IKey.md)
 - [IOperations](type-aliases/IOperations.md)
 
 ### Functions

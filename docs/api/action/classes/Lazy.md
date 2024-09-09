@@ -33,7 +33,7 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Parameters
 
-• **callable**: [`ICallable`](../interfaces/ICallable.md)
+• **callable**: [`ICallable`](../../types/interfaces/ICallable.md)
 
 #### Returns
 
@@ -41,17 +41,17 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:39](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/action.ts#L39)
+[action.ts:19](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/action.ts#L19)
 
 ## Properties
 
 ### callable
 
-> **callable**: [`ICallable`](../interfaces/ICallable.md)
+> **callable**: [`ICallable`](../../types/interfaces/ICallable.md)
 
 #### Defined in
 
-[action.ts:38](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/action.ts#L38)
+[action.ts:18](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/action.ts#L18)
 
 ## Methods
 
@@ -69,4 +69,4 @@ for (let i = 1; i < element.children.length; i++) set({ className: lazy }, '', i
 
 #### Defined in
 
-[action.ts:42](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/action.ts#L42)
+[action.ts:22](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/action.ts#L22)

@@ -1,10 +1,22 @@
 /**
- *
- * This module exports functions that wrap objects to perform many useful
- * transformations when their properties are fetched (get), set or deleted.
+ * General app actions.
  *
  * @module
  */
+type IKey = string | number | symbol;
+/**
+ * Represents any function
+ */
+interface ICallable {
+    (...args: any[]): any;
+}
+
+/**
+ * Objects that transform values before they are sent to/from objects they wrap.
+ *
+ * @module
+ */
+
 interface ITransformer {
     /**
      * Transforms the value returned from a property access
@@ -31,6 +43,15 @@ interface ITransformer {
      */
     ret?<T, U>(p: string | number | symbol, value: T): U;
 }
+declare class Transformer<T> {
+    #private;
+    object: T;
+    trans: ITransformer;
+    constructor(object: T, trans: ITransformer);
+    get(p: IKey): any;
+    set(p: IKey, value: any): void;
+    proxy(): T;
+}
 /**
  * Creates a transformer object which wraps the given object to
  * transform values passed to/from it.
@@ -48,6 +69,16 @@ interface ITransformer {
  * @returns
  */
 declare function transformer<T>(object: T, trans: ITransformer): T;
+declare class Arg<T> {
+    #private;
+    object: T;
+    fn: ICallable;
+    constructor(object: T, fn: ICallable);
+    get(p: IKey): any;
+    set(p: IKey, value: any): any;
+    delete(p: IKey): any;
+    proxy(): T;
+}
 /**
  *
  * Returns a wrapper object which always invokes the function with the
@@ -77,6 +108,16 @@ type ILike<T, U = any> = {
 type IOp<T> = {
     [key in keyof T]?: T[key];
 };
+declare class Redirect<T> {
+    #private;
+    map: T;
+    remap?: IOp<ILike<T, IKey>>;
+    constructor(map: T, remap?: IOp<ILike<T, IKey>>);
+    get(p: IKey): any;
+    set(p: IKey, value: any): void;
+    delete(p: IKey): void;
+    proxy(): T;
+}
 /**
  * Returns an object whose properties are drawn from multiple objects.
  *
@@ -100,4 +141,4 @@ type IOp<T> = {
  */
 declare function redirect<T>(map: T, remap?: IOp<ILike<T, string>>): ILike<T>;
 
-export { type ILike, type IOp, type ITransformer, arg, redirect, transformer };
+export { Arg, type ILike, type IOp, type ITransformer, Redirect, Transformer, arg, redirect, transformer };

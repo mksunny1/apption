@@ -10,12 +10,7 @@ type IKey = string | number | symbol;
 interface ICallable {
     (...args: any[]): any;
 }
-/**
- * Represents any object with values of type T.
- */
-interface IMap<T> {
-    [key: IKey]: T;
-}
+
 /**
  * Wraps a function that returns a real value to work with when an action is triggered.
  * ALl actions exported by this module ({@link act}, {@link call}, {@link set}, {@link del})
@@ -450,11 +445,13 @@ declare function foreach(object: any, callable: ICallable): void;
  *
  */
 declare class Selector {
+    #private;
     treespace?: Element;
     constructor(treespace?: Element);
     get(key: any): any;
     set(key: any, value: any): void;
     delete(key: any): void;
+    proxy(): any;
 }
 /**
  * Returns a proxy object that selects an element when a property is requested from it.
@@ -477,10 +474,9 @@ declare class Selector {
  *
  *
  * @param treespace
- * @param cls
  * @returns
  */
-declare function selector(treespace?: Element, cls?: typeof Selector): Selector;
+declare function selector(treespace?: Element): any;
 /**
  * Returns a selection object that lazily represents a property with the name within the `treespace` element (or document).
  * Calling [get]{@link MemberSelector#get} returns the property in the specified element.
@@ -527,10 +523,9 @@ declare class MemberSelector extends Selector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-declare function member(name: string, treespace?: Element, cls?: typeof MemberSelector): Selector;
+declare function member(name: string, treespace?: Element): any;
 /**
  * Returns a selection object that lazily represents an attribute with the name within the `treespace` element (or document).
  * Calling [get]{@link AttrSelector#get} returns the attribute in the specified element.
@@ -575,10 +570,9 @@ declare class AttrSelector extends MemberSelector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-declare function attr(name: string, treespace?: Element, cls?: typeof AttrSelector): Selector;
+declare function attr(name: string, treespace?: Element): any;
 /**
  * Returns a selection object that lazily represents a method with the name within the `treespace` element (or document).
  * Invoking [call]{@link AttrSelector#get} will call the corresponding method on the
@@ -600,9 +594,11 @@ declare function attr(name: string, treespace?: Element, cls?: typeof AttrSelect
  *
  */
 declare class MethodSelector extends Selector {
+    #private;
     name: string;
     constructor(name: string, treespace?: Element);
     call(key: any, ...args: any[]): any;
+    proxy(): any;
 }
 /**
  * Returns an object that lazily represents a method with the name within the `treespace` (or document).
@@ -623,18 +619,16 @@ declare class MethodSelector extends Selector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-declare function method(name: string, treespace?: Element, cls?: typeof MethodSelector): MethodSelector;
+declare function method(name: string, treespace?: Element): any;
 
 /**
- *
- * This module exports functions that wrap objects to perform many useful
- * transformations when their properties are fetched (get), set or deleted.
+ * Objects that transform values before they are sent to/from objects they wrap.
  *
  * @module
  */
+
 interface ITransformer {
     /**
      * Transforms the value returned from a property access
@@ -661,6 +655,15 @@ interface ITransformer {
      */
     ret?<T, U>(p: string | number | symbol, value: T): U;
 }
+declare class Transformer<T> {
+    #private;
+    object: T;
+    trans: ITransformer;
+    constructor(object: T, trans: ITransformer);
+    get(p: IKey): any;
+    set(p: IKey, value: any): void;
+    proxy(): T;
+}
 /**
  * Creates a transformer object which wraps the given object to
  * transform values passed to/from it.
@@ -678,6 +681,16 @@ interface ITransformer {
  * @returns
  */
 declare function transformer<T>(object: T, trans: ITransformer): T;
+declare class Arg<T> {
+    #private;
+    object: T;
+    fn: ICallable;
+    constructor(object: T, fn: ICallable);
+    get(p: IKey): any;
+    set(p: IKey, value: any): any;
+    delete(p: IKey): any;
+    proxy(): T;
+}
 /**
  *
  * Returns a wrapper object which always invokes the function with the
@@ -707,6 +720,16 @@ type ILike<T, U = any> = {
 type IOp<T> = {
     [key in keyof T]?: T[key];
 };
+declare class Redirect<T> {
+    #private;
+    map: T;
+    remap?: IOp<ILike<T, IKey>>;
+    constructor(map: T, remap?: IOp<ILike<T, IKey>>);
+    get(p: IKey): any;
+    set(p: IKey, value: any): void;
+    delete(p: IKey): void;
+    proxy(): T;
+}
 /**
  * Returns an object whose properties are drawn from multiple objects.
  *
@@ -730,4 +753,4 @@ type IOp<T> = {
  */
 declare function redirect<T>(map: T, remap?: IOp<ILike<T, string>>): ILike<T>;
 
-export { Action, Args, ArrayActions, AttrSelector, CallAction, ChildrenActions, DelAction, type IAction, type IActionMap, type IActionMapObject, type ICallable, type IConcreteOperation, type IKey, type ILike, type IMap, type IOp, type IOperations, type ITransformer, Lazy, MemberSelector, MethodSelector, ObjectAction, Selector, SetAction, act, arg, attr, call, del, foreach, map, mapKeys, mapValues, member, method, redirect, reduce, selector, set, transformer, zip };
+export { Action, Arg, Args, ArrayActions, AttrSelector, CallAction, ChildrenActions, DelAction, type IAction, type IActionMap, type IActionMapObject, type IConcreteOperation, type ILike, type IOp, type IOperations, type ITransformer, Lazy, MemberSelector, MethodSelector, ObjectAction, Redirect, Selector, SetAction, Transformer, act, arg, attr, call, del, foreach, map, mapKeys, mapValues, member, method, redirect, reduce, selector, set, transformer, zip };

@@ -52,7 +52,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:47](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L47)
+[selector.ts:48](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L48)
 
 ## Properties
 
@@ -62,7 +62,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L46)
 
 ## Methods
 
@@ -80,7 +80,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:74](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L74)
+[selector.ts:75](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L75)
 
 ***
 
@@ -98,7 +98,21 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:50](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L50)
+[selector.ts:51](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L51)
+
+***
+
+### proxy()
+
+> **proxy**(): `any`
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[selector.ts:79](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L79)
 
 ***
 
@@ -118,4 +132,4 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:67](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L67)
+[selector.ts:68](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L68)

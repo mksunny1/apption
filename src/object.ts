@@ -4,7 +4,7 @@
  * @module
  */
 
-import { ICallable, IKey } from "./action";
+import { ICallable, IKey } from "./types";
 
 /**
  * Combine `keys` with corresponding items in `values` to form and return an object.

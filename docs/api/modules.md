@@ -12,3 +12,4 @@
 - [middleware](middleware/README.md)
 - [object](object/README.md)
 - [selector](selector/README.md)
+- [types](types/README.md)

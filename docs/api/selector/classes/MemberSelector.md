@@ -57,7 +57,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:129](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L129)
+[selector.ts:133](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L133)
 
 ## Properties
 
@@ -67,7 +67,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:128](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L128)
+[selector.ts:132](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L132)
 
 ***
 
@@ -81,7 +81,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L46)
 
 ## Methods
 
@@ -103,7 +103,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:139](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L139)
+[selector.ts:143](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L143)
 
 ***
 
@@ -125,7 +125,25 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:133](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L133)
+[selector.ts:137](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L137)
+
+***
+
+### proxy()
+
+> **proxy**(): `any`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[`Selector`](Selector.md).[`proxy`](Selector.md#proxy)
+
+#### Defined in
+
+[selector.ts:79](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L79)
 
 ***
 
@@ -149,4 +167,4 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:136](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L136)
+[selector.ts:140](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L140)

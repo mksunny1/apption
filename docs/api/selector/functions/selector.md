@@ -6,7 +6,7 @@
 
 # Function: selector()
 
-> **selector**(`treespace`?, `cls`?): [`Selector`](../classes/Selector.md)
+> **selector**(`treespace`?): `any`
 
 Returns a proxy object that selects an element when a property is requested from it. 
 Setting a property will also replace the selected element and deleting 
@@ -19,11 +19,9 @@ number keys.
 
 • **treespace?**: `Element`
 
-• **cls?**: *typeof* [`Selector`](../classes/Selector.md) = `Selector`
-
 ## Returns
 
-[`Selector`](../classes/Selector.md)
+`any`
 
 ## Example
 
@@ -41,4 +39,4 @@ console.log(slct.article.textContent);  // I am an article
 
 ## Defined in
 
-[selector.ts:103](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L103)
+[selector.ts:107](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L107)

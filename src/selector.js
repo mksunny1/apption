@@ -41,6 +41,7 @@ const selectorTrap = {
  *
  */
 export class Selector {
+    #proxy;
     constructor(treespace) {
         if (treespace)
             this.treespace = treespace;
@@ -78,6 +79,11 @@ export class Selector {
         if (currentElement)
             currentElement.remove();
     }
+    proxy() {
+        if (!this.#proxy)
+            this.#proxy = new Proxy(this, selectorTrap);
+        return this.#proxy;
+    }
 }
 /**
  * Returns a proxy object that selects an element when a property is requested from it.
@@ -100,11 +106,10 @@ export class Selector {
  *
  *
  * @param treespace
- * @param cls
  * @returns
  */
-export function selector(treespace, cls = Selector) {
-    return new Proxy(new cls(treespace), selectorTrap);
+export function selector(treespace) {
+    return new Selector(treespace).proxy();
 }
 /**
  * Returns a selection object that lazily represents a property with the name within the `treespace` element (or document).
@@ -160,11 +165,10 @@ export class MemberSelector extends Selector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-export function member(name, treespace, cls = MemberSelector) {
-    return new Proxy(new cls(name, treespace), selectorTrap);
+export function member(name, treespace) {
+    return new MemberSelector(name, treespace).proxy();
 }
 /**
  * Returns a selection object that lazily represents an attribute with the name within the `treespace` element (or document).
@@ -216,11 +220,10 @@ export class AttrSelector extends MemberSelector {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-export function attr(name, treespace, cls = AttrSelector) {
-    return member(name, treespace, cls || AttrSelector);
+export function attr(name, treespace) {
+    return new AttrSelector(name, treespace).proxy();
 }
 /**
  * Returns a selection object that lazily represents a method with the name within the `treespace` element (or document).
@@ -243,12 +246,18 @@ export function attr(name, treespace, cls = AttrSelector) {
  *
  */
 export class MethodSelector extends Selector {
+    #proxy;
     constructor(name, treespace) {
         super(treespace);
         this.name = name;
     }
     call(key, ...args) {
         return super.get(key)?.[this.name](...args);
+    }
+    proxy() {
+        if (!this.#proxy)
+            this.#proxy = new Proxy(this, methodSelectorTrap);
+        return this.#proxy;
     }
 }
 const methodSelectorTrap = {
@@ -275,9 +284,8 @@ const methodSelectorTrap = {
  *
  * @param name
  * @param treespace
- * @param cls
  * @returns
  */
-export function method(name, treespace, cls = MethodSelector) {
-    return new Proxy(new cls(name, treespace), methodSelectorTrap);
+export function method(name, treespace) {
+    return new MethodSelector(name, treespace).proxy();
 }

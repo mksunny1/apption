@@ -38,4 +38,4 @@ console.log(tObj.b);    // 10
 
 ## Defined in
 
-[middleware.ts:75](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/middleware.ts#L75)
+[middleware.ts:95](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L95)

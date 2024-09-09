@@ -2,7 +2,7 @@
 
 ***
 
-[apption](../../modules.md) / [action](../README.md) / IMap
+[apption](../../modules.md) / [types](../README.md) / IMap
 
 # Interface: IMap\<T\>
 

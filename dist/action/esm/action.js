@@ -1,9 +1,4 @@
 /**
- * General app actions.
- *
- * @module
- */
-/**
  * Wraps a function that returns a real value to work with when an action is triggered.
  * ALl actions exported by this module ({@link act}, {@link call}, {@link set}, {@link del})
  * recognise instances of this type. This removes the need to hold references to concrete

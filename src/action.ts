@@ -1,24 +1,4 @@
-/**
- * General app actions.
- * 
- * @module
- */
-
-export type IKey = string | number | symbol;
-
-/**
- * Represents any function
- */
-export interface ICallable {
-    (...args: any[]): any;
-}
-
-/**
- * Represents any object with values of type T.
- */
-export interface IMap<T> {
-    [key: IKey]: T;
-}
+import { ICallable } from "./types";
 
 /**
  * Wraps a function that returns a real value to work with when an action is triggered. 

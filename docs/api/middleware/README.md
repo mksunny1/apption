@@ -6,10 +6,15 @@
 
 # middleware
 
-This module exports functions that wrap objects to perform many useful 
-transformations when their properties are fetched (get), set or deleted.
+Objects that transform values before they are sent to/from objects they wrap.
 
 ## Index
+
+### Classes
+
+- [Arg](classes/Arg.md)
+- [Redirect](classes/Redirect.md)
+- [Transformer](classes/Transformer.md)
 
 ### Interfaces
 

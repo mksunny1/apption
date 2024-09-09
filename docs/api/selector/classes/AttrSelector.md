@@ -53,7 +53,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:129](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L129)
+[selector.ts:133](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L133)
 
 ## Properties
 
@@ -67,7 +67,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:128](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L128)
+[selector.ts:132](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L132)
 
 ***
 
@@ -81,7 +81,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L46)
 
 ## Methods
 
@@ -103,7 +103,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:197](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L197)
+[selector.ts:200](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L200)
 
 ***
 
@@ -125,7 +125,25 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:191](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L191)
+[selector.ts:194](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L194)
+
+***
+
+### proxy()
+
+> **proxy**(): `any`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[`MemberSelector`](MemberSelector.md).[`proxy`](MemberSelector.md#proxy)
+
+#### Defined in
+
+[selector.ts:79](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L79)
 
 ***
 
@@ -149,4 +167,4 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:194](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L194)
+[selector.ts:197](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L197)

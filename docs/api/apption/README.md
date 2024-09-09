@@ -14,6 +14,12 @@ Re-exports [Action](../action/classes/Action.md)
 
 ***
 
+### Arg
+
+Re-exports [Arg](../middleware/classes/Arg.md)
+
+***
+
 ### Args
 
 Re-exports [Args](../action/classes/Args.md)
@@ -68,33 +74,15 @@ Re-exports [IActionMapObject](../action/type-aliases/IActionMapObject.md)
 
 ***
 
-### ICallable
-
-Re-exports [ICallable](../action/interfaces/ICallable.md)
-
-***
-
 ### IConcreteOperation
 
 Re-exports [IConcreteOperation](../action/type-aliases/IConcreteOperation.md)
 
 ***
 
-### IKey
-
-Re-exports [IKey](../action/type-aliases/IKey.md)
-
-***
-
 ### ILike
 
 Re-exports [ILike](../middleware/type-aliases/ILike.md)
-
-***
-
-### IMap
-
-Re-exports [IMap](../action/interfaces/IMap.md)
 
 ***
 
@@ -140,6 +128,12 @@ Re-exports [ObjectAction](../action/classes/ObjectAction.md)
 
 ***
 
+### Redirect
+
+Re-exports [Redirect](../middleware/classes/Redirect.md)
+
+***
+
 ### Selector
 
 Re-exports [Selector](../selector/classes/Selector.md)
@@ -149,6 +143,12 @@ Re-exports [Selector](../selector/classes/Selector.md)
 ### SetAction
 
 Re-exports [SetAction](../action/classes/SetAction.md)
+
+***
+
+### Transformer
+
+Re-exports [Transformer](../middleware/classes/Transformer.md)
 
 ***
 

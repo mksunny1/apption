@@ -15,7 +15,7 @@ The returned object will be the same as the input if `inPlace` is truthy.
 
 • **object**: `any`
 
-• **mapper**: [`ICallable`](../../action/interfaces/ICallable.md)
+• **mapper**: [`ICallable`](../../types/interfaces/ICallable.md)
 
 • **inPlace?**: `boolean`
 
@@ -33,4 +33,4 @@ console.log(obj)   // { a1: 1, b1: 2, c1: 3 }
 
 ## Defined in
 
-[object.ts:63](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/object.ts#L63)
+[object.ts:63](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/object.ts#L63)

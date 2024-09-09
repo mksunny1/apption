@@ -14,7 +14,7 @@ all keys must be provided.
 
 ## Parameters
 
-• **keys**: [`IKey`](../../action/type-aliases/IKey.md)[]
+• **keys**: [`IKey`](../../types/type-aliases/IKey.md)[]
 
 • **values?**: `any`[]
 
@@ -32,4 +32,4 @@ console.log(obj)   // { a: 1, b: 2, c: 3 }
 
 ## Defined in
 
-[object.ts:23](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/object.ts#L23)
+[object.ts:23](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/object.ts#L23)

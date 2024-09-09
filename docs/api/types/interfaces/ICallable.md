@@ -2,7 +2,7 @@
 
 ***
 
-[apption](../../modules.md) / [action](../README.md) / ICallable
+[apption](../../modules.md) / [types](../README.md) / ICallable
 
 # Interface: ICallable()
 
@@ -22,4 +22,4 @@ Represents any function
 
 ## Defined in
 
-[action.ts:13](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/action.ts#L13)
+types.ts:13

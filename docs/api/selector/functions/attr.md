@@ -6,7 +6,7 @@
 
 # Function: attr()
 
-> **attr**(`name`, `treespace`?, `cls`?): [`Selector`](../classes/Selector.md)
+> **attr**(`name`, `treespace`?): `any`
 
 Returns an object that lazily represents an attribute with the name within the `treespace` element (or document).
 Getting properties returns the attribute in the specified element and setting or deleting properties 
@@ -18,11 +18,9 @@ updates or removes the attribute correspondingly.
 
 • **treespace?**: `Element`
 
-• **cls?**: *typeof* [`AttrSelector`](../classes/AttrSelector.md) = `AttrSelector`
-
 ## Returns
 
-[`Selector`](../classes/Selector.md)
+`any`
 
 ## Example
 
@@ -40,4 +38,4 @@ console.log(slct.p);  // main
 
 ## Defined in
 
-[selector.ts:224](https://github.com/mksunny1/apption/blob/8a5b4dcedc594ef8c2d14b969bb9eb94e7e47749/src/selector.ts#L224)
+[selector.ts:226](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/selector.ts#L226)
