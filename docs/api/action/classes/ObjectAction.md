@@ -36,7 +36,7 @@ Base class for actions on objects
 
 #### Defined in
 
-[action.ts:267](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L267)
+[action.ts:267](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/action.ts#L267)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Base class for actions on objects
 
 #### Defined in
 
-[action.ts:263](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L263)
+[action.ts:263](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/action.ts#L263)
 
 ## Accessors
 
@@ -62,7 +62,7 @@ The function equivalent of this action.
 
 #### Defined in
 
-[action.ts:273](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L273)
+[action.ts:273](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/action.ts#L273)
 
 ## Methods
 
@@ -80,4 +80,4 @@ The function equivalent of this action.
 
 #### Defined in
 
-[action.ts:264](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L264)
+[action.ts:264](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/action.ts#L264)

@@ -104,7 +104,7 @@ describe('action.set', async t1 => {
         const actions = {
             a: [obj1], b: [obj2], c: [obj1]
         };
-        set(actions, new Lazy(x => x * 2));
+        set(actions, new Lazy((key, val) => val * 2));
         assert.deepEqual(obj1, { a: 2, b: 2, c: 6});
         assert.deepEqual(obj2, { a: 1, b: 4, c: 3});
     });

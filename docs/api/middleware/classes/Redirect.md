@@ -53,7 +53,7 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:253](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L253)
+[middleware.ts:253](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L253)
 
 ## Properties
 
@@ -63,7 +63,7 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:250](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L250)
+[middleware.ts:250](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L250)
 
 ***
 
@@ -73,7 +73,7 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:251](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L251)
+[middleware.ts:251](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L251)
 
 ## Methods
 
@@ -91,7 +91,7 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:275](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L275)
+[middleware.ts:275](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L275)
 
 ***
 
@@ -109,7 +109,7 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:257](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L257)
+[middleware.ts:257](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L257)
 
 ***
 
@@ -123,7 +123,7 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:282](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L282)
+[middleware.ts:282](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L282)
 
 ***
 
@@ -143,4 +143,4 @@ console.log(red.get('d'))     // 3
 
 #### Defined in
 
-[middleware.ts:268](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/middleware.ts#L268)
+[middleware.ts:268](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/middleware.ts#L268)

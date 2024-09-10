@@ -14,8 +14,8 @@ The `map` argument maps propserty keys to arrays of objects on which to set the 
 If any array or object is of type [Lazy](../classes/Lazy.md), it is first resolved to obtain the 
 array or object to work with.
 
-If the value to set is of type [Lazy](../classes/Lazy.md), its value method is called with the previous 
-property values for each object to compute the new values to be set.
+If the value to set is of type [Lazy](../classes/Lazy.md), its value method is called with the property key 
+and previous value for each object to compute the new value to be set.
 
 ## Parameters
 
@@ -37,11 +37,11 @@ set(actions, 20);
 console.log(obj1);    // { a: 20, b: 2, c: 20}
 console.log(obj2);    // { a: 1, b: 20, c: 3}
 
-set(actions, new Lazy(x => x * 2));
+set(actions, new Lazy((key, val) => val * 2));
 console.log(obj1);    // { a: 40, b: 2, c: 40}
 console.log(obj2);    // { a: 1, b: 40, c: 3}
 ```
 
 ## Defined in
 
-[action.ts:183](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L183)
+[action.ts:183](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/action.ts#L183)
