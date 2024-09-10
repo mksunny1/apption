@@ -32,4 +32,4 @@ console.log(obj2);    // { a: 1, c: 3}
 
 ## Defined in
 
-[action.ts:199](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/action.ts#L199)
+[action.ts:209](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L209)

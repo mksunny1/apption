@@ -91,11 +91,22 @@ describe('action.call', async t1 => {
 describe('action.set', async t1 => {
     await it('Should correctly set a simple map of properties', async t2 => {
         let obj1 = { a: 1, b: 2, c: 3 }, obj2 = { a: 1, b: 2, c: 3 };
-        set({
+        const actions = {
             a: [obj1], b: [obj2], c: [obj1]
-        }, 20);
+        };
+        set(actions, 20);
         assert.deepEqual(obj1, { a: 20, b: 2, c: 20});
         assert.deepEqual(obj2, { a: 1, b: 20, c: 3});
+
+    });
+    await it('Should correctly update a simple map of properties', async t2 => {
+        let obj1 = { a: 1, b: 2, c: 3 }, obj2 = { a: 1, b: 2, c: 3 };
+        const actions = {
+            a: [obj1], b: [obj2], c: [obj1]
+        };
+        set(actions, new Lazy(x => x * 2));
+        assert.deepEqual(obj1, { a: 2, b: 2, c: 6});
+        assert.deepEqual(obj2, { a: 1, b: 4, c: 3});
     });
 
     await it('Should resolve `Lazy` values', async t2 => {

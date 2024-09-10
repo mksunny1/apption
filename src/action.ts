@@ -157,8 +157,13 @@ export function call(map: IActionMapObject, ...args: any[]) {
 /**
  * Sets specified properties in different objects.
  * 
- * If any array of objects (value) or object (value item) is of type {@link Lazy}, it is first resolved to obtain the 
- * object(s) to work with.
+ * The `map` argument maps propserty keys to arrays of objects on which to set the properties.
+ * If any array or object is of type {@link Lazy}, it is first resolved to obtain the 
+ * array or object to work with.
+ * 
+ * If the value to set is of type {@link Lazy}, its value method is called with the previous 
+ * property values for each object to compute the new values to be set.
+ * 
  * 
  * @example
  * import { set } from 'apption'
@@ -167,6 +172,10 @@ export function call(map: IActionMapObject, ...args: any[]) {
  * set(actions, 20);
  * console.log(obj1);    // { a: 20, b: 2, c: 20}
  * console.log(obj2);    // { a: 1, b: 20, c: 3}
+ * 
+ * set(actions, new Lazy(x => x * 2));
+ * console.log(obj1);    // { a: 40, b: 2, c: 40}
+ * console.log(obj2);    // { a: 1, b: 40, c: 3}
  * 
  * @param map 
  * @param value 
@@ -177,7 +186,8 @@ export function set(map: IActionMapObject, value: any) {
         if (objects instanceof Lazy) objects = objects.value(key, value);
         for (object of objects) {
             if (object instanceof Lazy) object = object.value(key, value);
-            (object as any)[key] = value;
+            if (value instanceof Lazy) (object as any)[key] = value.value((object as any)[key]);
+            else (object as any)[key] = value;
         }
     }
 }

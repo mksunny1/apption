@@ -10,8 +10,12 @@
 
 Sets specified properties in different objects.
 
-If any array of objects (value) or object (value item) is of type [Lazy](../classes/Lazy.md), it is first resolved to obtain the 
-object(s) to work with.
+The `map` argument maps propserty keys to arrays of objects on which to set the properties.
+If any array or object is of type [Lazy](../classes/Lazy.md), it is first resolved to obtain the 
+array or object to work with.
+
+If the value to set is of type [Lazy](../classes/Lazy.md), its value method is called with the previous 
+property values for each object to compute the new values to be set.
 
 ## Parameters
 
@@ -32,8 +36,12 @@ const actions = { a: [obj1], b: [obj2], c: [obj1] };
 set(actions, 20);
 console.log(obj1);    // { a: 20, b: 2, c: 20}
 console.log(obj2);    // { a: 1, b: 20, c: 3}
+
+set(actions, new Lazy(x => x * 2));
+console.log(obj1);    // { a: 40, b: 2, c: 40}
+console.log(obj2);    // { a: 1, b: 40, c: 3}
 ```
 
 ## Defined in
 
-[action.ts:174](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/action.ts#L174)
+[action.ts:183](https://github.com/mksunny1/apption/blob/edbec5398a9c4dd80aef328bce86959614ae2fb4/src/action.ts#L183)
