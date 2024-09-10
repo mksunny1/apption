@@ -8,11 +8,8 @@
 
 > **arg**\<`T`\>(`object`, `fn`): `T`
 
-Returns a wrapper object which always invokes the function with the 
-input object after a property is set on or deleted from it. The function 
-will also be called before a property is retrieved from the object. This is 
-useful for more complex transformations/computations that involve properties 
-from multiple objects instead of a single one.
+Creates a proxy of an `Arg` instance whcich maps property accesses to 
+corresponding `Arg` methods.
 
 ## Type Parameters
 
@@ -35,7 +32,7 @@ import { arg } from 'apption'
 const obj = { a: 1, b: 2 };
 let storedValue;
 const fn = val => storedValue = val.a + val.b;
-const arg = (obj, fn);
+const arg = arg(obj, fn);
 arg.a = 24;
 console.log(storedValue)     // 24+2 = 26.
 arg.b = 25;
@@ -44,4 +41,4 @@ console.log(storedValue)     // 24+25 = 49.
 
 ## Defined in
 
-[middleware.ts:161](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L161)
+[middleware.ts:201](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L201)

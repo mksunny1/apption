@@ -8,14 +8,7 @@
 
 > **redirect**\<`T`\>(`map`, `remap`?): [`ILike`](../type-aliases/ILike.md)\<`T`\>
 
-Returns an object whose properties are drawn from multiple objects.
-
-The keys in `map` are the 'virtual' properties of the redirect object and 
-the values are the source objects containing the real properties.
-
-The optional `remap` object may be used to map virtual properties to 
-another property on the source object. Any virtual properties not in 
-`remap` will naturally have the same name in the source object.
+Creates a proxy of a Redirect instance so that we can use it like a normal object.
 
 ## Type Parameters
 
@@ -44,4 +37,4 @@ console.log(red.d)     // 3
 
 ## Defined in
 
-[middleware.ts:248](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L248)
+[middleware.ts:302](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L302)

@@ -6,6 +6,26 @@
 
 # Class: Transformer\<T\>
 
+An object which wraps another object to 
+transform values passed to/from it using the transformer object.
+
+## Example
+
+```ts
+import { Transformer } from 'apption'
+const obj = { a: 1, b: 2 };
+const trans = { get(val) {return val * 5} };
+const tObj = new Transformer(obj, trans);
+console.log(tObj.get('a'));    // 5
+console.log(tObj.get('b'));    // 10
+console.log(tObj.proxy().a);    
+// 5. `new Transformer(obj, trans).proxy()` is equivalent to `transformer(obj, trans)`
+```
+
+## Param
+
+## Param
+
 ## Type Parameters
 
 • **T**
@@ -28,7 +48,7 @@
 
 #### Defined in
 
-[middleware.ts:51](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L51)
+[middleware.ts:69](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L69)
 
 ## Properties
 
@@ -38,7 +58,7 @@
 
 #### Defined in
 
-[middleware.ts:48](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L48)
+[middleware.ts:66](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L66)
 
 ***
 
@@ -48,7 +68,7 @@
 
 #### Defined in
 
-[middleware.ts:49](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L49)
+[middleware.ts:67](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L67)
 
 ## Methods
 
@@ -66,7 +86,7 @@
 
 #### Defined in
 
-[middleware.ts:55](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L55)
+[middleware.ts:74](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L74)
 
 ***
 
@@ -80,7 +100,7 @@
 
 #### Defined in
 
-[middleware.ts:73](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L73)
+[middleware.ts:92](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L92)
 
 ***
 
@@ -100,4 +120,4 @@
 
 #### Defined in
 
-[middleware.ts:68](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L68)
+[middleware.ts:87](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L87)

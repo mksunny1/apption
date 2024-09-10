@@ -6,6 +6,31 @@
 
 # Class: Redirect\<T\>
 
+Creates an object which reroutes property accesses (`get`, `set` and `delete`) to 
+other objects.
+
+The keys in `Redirect.map` are the 'virtual' properties of the Redirect instance and 
+the values are the source objects containing the real properties.
+
+The optional `Redirect.remap` object may be used to map a virtual property to 
+a property with a different key in the source object. Any virtual properties not in 
+`Redirect.remap` will naturally have the same key in the source object.
+
+## Example
+
+```ts
+import { redirect } from 'apption'
+const obj1 = { a: 1, b: 2 };
+const obj2 = { a: 3, b: 4 };
+const red = new Redirect({ c: obj1, d: obj2 }, {c: 'a', d: 'a'});
+console.log(red.get('c'))     // 1
+console.log(red.get('d'))     // 3
+```
+
+## Param
+
+## Param
+
 ## Type Parameters
 
 • **T**
@@ -28,7 +53,7 @@
 
 #### Defined in
 
-[middleware.ts:192](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L192)
+[middleware.ts:253](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L253)
 
 ## Properties
 
@@ -38,7 +63,7 @@
 
 #### Defined in
 
-[middleware.ts:189](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L189)
+[middleware.ts:250](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L250)
 
 ***
 
@@ -48,7 +73,7 @@
 
 #### Defined in
 
-[middleware.ts:190](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L190)
+[middleware.ts:251](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L251)
 
 ## Methods
 
@@ -66,7 +91,7 @@
 
 #### Defined in
 
-[middleware.ts:214](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L214)
+[middleware.ts:275](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L275)
 
 ***
 
@@ -84,7 +109,7 @@
 
 #### Defined in
 
-[middleware.ts:196](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L196)
+[middleware.ts:257](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L257)
 
 ***
 
@@ -98,7 +123,7 @@
 
 #### Defined in
 
-[middleware.ts:221](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L221)
+[middleware.ts:282](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L282)
 
 ***
 
@@ -118,4 +143,4 @@
 
 #### Defined in
 
-[middleware.ts:207](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L207)
+[middleware.ts:268](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L268)

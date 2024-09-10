@@ -8,8 +8,8 @@
 
 > **transformer**\<`T`\>(`object`, `trans`): `T`
 
-Creates a transformer object which wraps the given object to 
-transform values passed to/from it.
+Creates a proxy of a `Transformer` instance whcich maps property and method accesses to 
+`Transformer` methods.
 
 ## Type Parameters
 
@@ -38,4 +38,4 @@ console.log(tObj.b);    // 10
 
 ## Defined in
 
-[middleware.ts:95](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L95)
+[middleware.ts:114](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L114)

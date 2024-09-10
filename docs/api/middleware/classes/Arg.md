@@ -6,6 +6,32 @@
 
 # Class: Arg\<T\>
 
+Returns a wrapper object which always invokes the function with the 
+wrapped object after a property is set (`Arg.set(p, value)`) on or deleted (`Arg.delete(p)`) 
+from it. The function will also be called before a property is retrieved (`Arg.get(p)`) 
+from the object. 
+
+This is useful for more complex transformations/computations that involve 
+properties from multiple objects instead of a single one.
+
+## Example
+
+```ts
+import { arg } from 'apption'
+const obj = { a: 1, b: 2 };
+let storedValue;
+const fn = val => storedValue = val.a + val.b;
+const arg = new Arg(obj, fn);
+arg.set('a', 24);
+console.log(storedValue)     // 24+2 = 26.
+arg.set('b', 25);
+console.log(storedValue)     // 24+25 = 49.
+```
+
+## Param
+
+## Param
+
 ## Type Parameters
 
 • **T**
@@ -28,7 +54,7 @@
 
 #### Defined in
 
-[middleware.ts:117](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L117)
+[middleware.ts:160](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L160)
 
 ## Properties
 
@@ -38,7 +64,7 @@
 
 #### Defined in
 
-[middleware.ts:115](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L115)
+[middleware.ts:158](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L158)
 
 ***
 
@@ -48,7 +74,7 @@
 
 #### Defined in
 
-[middleware.ts:114](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L114)
+[middleware.ts:157](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L157)
 
 ## Methods
 
@@ -66,7 +92,7 @@
 
 #### Defined in
 
-[middleware.ts:129](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L129)
+[middleware.ts:172](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L172)
 
 ***
 
@@ -84,7 +110,7 @@
 
 #### Defined in
 
-[middleware.ts:121](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L121)
+[middleware.ts:164](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L164)
 
 ***
 
@@ -98,7 +124,7 @@
 
 #### Defined in
 
-[middleware.ts:133](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L133)
+[middleware.ts:176](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L176)
 
 ***
 
@@ -118,4 +144,4 @@
 
 #### Defined in
 
-[middleware.ts:125](https://github.com/mksunny1/apption/blob/7303acd5ad264aa235c8c110ccb0c2efbc2d008c/src/middleware.ts#L125)
+[middleware.ts:168](https://github.com/mksunny1/apption/blob/528ebd3a42ce7da6886ac83411e2c2063969821c/src/middleware.ts#L168)
