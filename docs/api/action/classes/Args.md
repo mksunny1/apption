@@ -40,7 +40,7 @@ console.log(count);   // 25
 
 #### Defined in
 
-[action.ts:78](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/action.ts#L78)
+[action.ts:78](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/action.ts#L78)
 
 ## Properties
 
@@ -50,4 +50,4 @@ console.log(count);   // 25
 
 #### Defined in
 
-[action.ts:77](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/action.ts#L77)
+[action.ts:77](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/action.ts#L77)

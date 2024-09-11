@@ -52,7 +52,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:48](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L48)
+[selector.ts:48](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L48)
 
 ## Properties
 
@@ -62,7 +62,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L46)
 
 ## Methods
 
@@ -80,7 +80,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:75](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L75)
+[selector.ts:75](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L75)
 
 ***
 
@@ -98,7 +98,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:51](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L51)
+[selector.ts:51](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L51)
 
 ***
 
@@ -112,7 +112,7 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:79](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L79)
+[selector.ts:79](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L79)
 
 ***
 
@@ -132,4 +132,4 @@ console.log(slct.get('main & p').textContent);  // P in MAIN
 
 #### Defined in
 
-[selector.ts:68](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L68)
+[selector.ts:68](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L68)

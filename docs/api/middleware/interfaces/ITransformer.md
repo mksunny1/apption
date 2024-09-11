@@ -32,7 +32,7 @@ Transforms the args passed in a method call
 
 #### Defined in
 
-[middleware.ts:28](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L28)
+[middleware.ts:28](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L28)
 
 ***
 
@@ -60,7 +60,7 @@ Transforms the value returned from a property access
 
 #### Defined in
 
-[middleware.ts:15](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L15)
+[middleware.ts:15](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L15)
 
 ***
 
@@ -88,7 +88,7 @@ Transforms the value returned from a method call.
 
 #### Defined in
 
-[middleware.ts:34](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L34)
+[middleware.ts:34](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L34)
 
 ***
 
@@ -116,4 +116,4 @@ Transforms the value assigned to a property
 
 #### Defined in
 
-[middleware.ts:22](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L22)
+[middleware.ts:22](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L22)

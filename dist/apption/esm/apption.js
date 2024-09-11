@@ -97,7 +97,7 @@ function act(operations, ...args) {
  * @example
  * import { call, ActionMap } from 'apption'
  * let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
- * const actions = new ActionMap([ 'push', [arr1, arr3]], ['unshift', [arr2]] ]);
+ * const actions = new ActionMap([[ 'push', [arr1, arr3]], ['unshift', [arr2]]]);
  * call(actions, 20, 21);
  * console.log(arr1)   // [1, 2, 3, 20, 21]
  * console.log(arr2)   // [20, 21, 1, 2, 3]
@@ -490,6 +490,16 @@ class ChildrenActions {
         this.element = element;
     }
 }
+/**
+ * A more semantic alias for ArrayActions which is a light array
+ * wrapper containing common array modification functions.
+ */
+const ApptionArray = ArrayActions;
+/**
+ * A more semantic alias for ChildrenActions which is an object
+ * providing a similar API to ApptionArray.
+ */
+const ChildrenArray = ChildrenActions;
 
 /**
  * Primitives for functionally creating and manipulating objects.
@@ -1168,4 +1178,4 @@ function redirect(map, remap) {
     return new Redirect(map, remap).proxy();
 }
 
-export { Action, ActionMap, Arg, Args, ArrayActions, AttrSelector, CallAction, ChildrenActions, DelAction, Lazy, MemberSelector, MethodSelector, ObjectAction, Redirect, Selector, SetAction, Transformer, act, arg, attr, call, del, foreach, map, mapKeys, mapValues, member, method, redirect, reduce, selector, set, transformer, zip };
+export { Action, ActionMap, ApptionArray, Arg, Args, ArrayActions, AttrSelector, CallAction, ChildrenActions, ChildrenArray, DelAction, Lazy, MemberSelector, MethodSelector, ObjectAction, Redirect, Selector, SetAction, Transformer, act, arg, attr, call, del, foreach, map, mapKeys, mapValues, member, method, redirect, reduce, selector, set, transformer, zip };

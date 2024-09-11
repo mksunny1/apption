@@ -97,7 +97,7 @@ function act(operations, ...args) {
  * @example
  * import { call, ActionMap } from 'apption'
  * let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
- * const actions = new ActionMap([ 'push', [arr1, arr3]], ['unshift', [arr2]] ]);
+ * const actions = new ActionMap([[ 'push', [arr1, arr3]], ['unshift', [arr2]]]);
  * call(actions, 20, 21);
  * console.log(arr1)   // [1, 2, 3, 20, 21]
  * console.log(arr2)   // [20, 21, 1, 2, 3]

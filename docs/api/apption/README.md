@@ -20,6 +20,12 @@ Re-exports [ActionMap](../action/classes/ActionMap.md)
 
 ***
 
+### ApptionArray
+
+Re-exports [ApptionArray](../array/variables/ApptionArray.md)
+
+***
+
 ### Arg
 
 Re-exports [Arg](../middleware/classes/Arg.md)
@@ -53,6 +59,12 @@ Re-exports [CallAction](../action/classes/CallAction.md)
 ### ChildrenActions
 
 Re-exports [ChildrenActions](../array/classes/ChildrenActions.md)
+
+***
+
+### ChildrenArray
+
+Re-exports [ChildrenArray](../array/variables/ChildrenArray.md)
 
 ***
 

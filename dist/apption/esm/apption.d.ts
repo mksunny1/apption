@@ -120,7 +120,7 @@ declare function act(operations: IOperations, ...args: any[]): void | any[];
  * @example
  * import { call, ActionMap } from 'apption'
  * let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
- * const actions = new ActionMap([ 'push', [arr1, arr3]], ['unshift', [arr2]] ]);
+ * const actions = new ActionMap([[ 'push', [arr1, arr3]], ['unshift', [arr2]]]);
  * call(actions, 20, 21);
  * console.log(arr1)   // [1, 2, 3, 20, 21]
  * console.log(arr2)   // [20, 21, 1, 2, 3]
@@ -348,6 +348,16 @@ declare class ChildrenActions<T> {
     clear(): void;
     constructor(element: Element);
 }
+/**
+ * A more semantic alias for ArrayActions which is a light array
+ * wrapper containing common array modification functions.
+ */
+declare const ApptionArray: typeof ArrayActions;
+/**
+ * A more semantic alias for ChildrenActions which is an object
+ * providing a similar API to ApptionArray.
+ */
+declare const ChildrenArray: typeof ChildrenActions;
 
 /**
  * Primitives for functionally creating and manipulating objects.
@@ -837,4 +847,4 @@ declare class Redirect<T> {
  */
 declare function redirect<T>(map: T, remap?: IOp<ILike<T, string>>): ILike<T>;
 
-export { Action, ActionMap, Arg, Args, ArrayActions, AttrSelector, CallAction, ChildrenActions, DelAction, type IAction, type IActionMap, type IActionMapObject, type IConcreteOperation, type ILike, type IOp, type IOperations, type ITransformer, Lazy, MemberSelector, MethodSelector, ObjectAction, Redirect, Selector, SetAction, Transformer, act, arg, attr, call, del, foreach, map, mapKeys, mapValues, member, method, redirect, reduce, selector, set, transformer, zip };
+export { Action, ActionMap, ApptionArray, Arg, Args, ArrayActions, AttrSelector, CallAction, ChildrenActions, ChildrenArray, DelAction, type IAction, type IActionMap, type IActionMapObject, type IConcreteOperation, type ILike, type IOp, type IOperations, type ITransformer, Lazy, MemberSelector, MethodSelector, ObjectAction, Redirect, Selector, SetAction, Transformer, act, arg, attr, call, del, foreach, map, mapKeys, mapValues, member, method, redirect, reduce, selector, set, transformer, zip };

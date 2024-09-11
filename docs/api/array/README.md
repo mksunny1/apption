@@ -14,3 +14,8 @@ Array types to work with {link actinn}
 
 - [ArrayActions](classes/ArrayActions.md)
 - [ChildrenActions](classes/ChildrenActions.md)
+
+### Variables
+
+- [ApptionArray](variables/ApptionArray.md)
+- [ChildrenArray](variables/ChildrenArray.md)

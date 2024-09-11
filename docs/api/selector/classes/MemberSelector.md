@@ -57,7 +57,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:133](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L133)
+[selector.ts:133](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L133)
 
 ## Properties
 
@@ -67,7 +67,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:132](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L132)
+[selector.ts:132](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L132)
 
 ***
 
@@ -81,7 +81,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L46)
 
 ## Methods
 
@@ -103,7 +103,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:143](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L143)
+[selector.ts:143](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L143)
 
 ***
 
@@ -125,7 +125,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:137](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L137)
+[selector.ts:137](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L137)
 
 ***
 
@@ -143,7 +143,7 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:79](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L79)
+[selector.ts:79](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L79)
 
 ***
 
@@ -167,4 +167,4 @@ console.log(slct.get('div'));  // I am a div
 
 #### Defined in
 
-[selector.ts:140](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L140)
+[selector.ts:140](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/selector.ts#L140)

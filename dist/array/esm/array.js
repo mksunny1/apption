@@ -164,5 +164,15 @@ class ChildrenActions {
         this.element = element;
     }
 }
+/**
+ * A more semantic alias for ArrayActions which is a light array
+ * wrapper containing common array modification functions.
+ */
+const ApptionArray = ArrayActions;
+/**
+ * A more semantic alias for ChildrenActions which is an object
+ * providing a similar API to ApptionArray.
+ */
+const ChildrenArray = ChildrenActions;
 
-export { ArrayActions, ChildrenActions };
+export { ApptionArray, ArrayActions, ChildrenActions, ChildrenArray };

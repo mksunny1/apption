@@ -61,5 +61,15 @@ declare class ChildrenActions<T> {
     clear(): void;
     constructor(element: Element);
 }
+/**
+ * A more semantic alias for ArrayActions which is a light array
+ * wrapper containing common array modification functions.
+ */
+declare const ApptionArray: typeof ArrayActions;
+/**
+ * A more semantic alias for ChildrenActions which is an object
+ * providing a similar API to ApptionArray.
+ */
+declare const ChildrenArray: typeof ChildrenActions;
 
-export { ArrayActions, ChildrenActions };
+export { ApptionArray, ArrayActions, ChildrenActions, ChildrenArray };

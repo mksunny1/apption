@@ -48,7 +48,7 @@ console.log(tObj.proxy().a);
 
 #### Defined in
 
-[middleware.ts:69](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L69)
+[middleware.ts:69](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L69)
 
 ## Properties
 
@@ -58,7 +58,7 @@ console.log(tObj.proxy().a);
 
 #### Defined in
 
-[middleware.ts:66](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L66)
+[middleware.ts:66](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L66)
 
 ***
 
@@ -68,7 +68,7 @@ console.log(tObj.proxy().a);
 
 #### Defined in
 
-[middleware.ts:67](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L67)
+[middleware.ts:67](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L67)
 
 ## Methods
 
@@ -86,7 +86,7 @@ console.log(tObj.proxy().a);
 
 #### Defined in
 
-[middleware.ts:74](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L74)
+[middleware.ts:74](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L74)
 
 ***
 
@@ -100,7 +100,7 @@ console.log(tObj.proxy().a);
 
 #### Defined in
 
-[middleware.ts:92](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L92)
+[middleware.ts:92](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L92)
 
 ***
 
@@ -120,4 +120,4 @@ console.log(tObj.proxy().a);
 
 #### Defined in
 
-[middleware.ts:87](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/middleware.ts#L87)
+[middleware.ts:87](https://github.com/mksunny1/apption/blob/dbb9a0b63a254dcf90cb4a7766307cb86cadec9a/src/middleware.ts#L87)
