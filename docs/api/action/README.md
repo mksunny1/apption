@@ -11,6 +11,7 @@
 ### Classes
 
 - [Action](classes/Action.md)
+- [ActionMap](classes/ActionMap.md)
 - [Args](classes/Args.md)
 - [CallAction](classes/CallAction.md)
 - [DelAction](classes/DelAction.md)

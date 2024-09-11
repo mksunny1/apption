@@ -34,7 +34,7 @@ export interface ITransformer {
     ret?<T, U>(p: string|number|symbol, value: T): U;
 }
 
-const transformerTrap = {
+const transformerHandler = {
     get(transformer: Transformer<any>, p: IKey) {
         return transformer.get(p);
     },
@@ -90,7 +90,7 @@ export class Transformer<T> {
         object[p] = value;
     }
     proxy(): T {
-        if (!this.#proxy) this.#proxy = new Proxy(this, transformerTrap) as unknown as T;
+        if (!this.#proxy) this.#proxy = new Proxy(this, transformerHandler) as unknown as T;
         return this.#proxy;
     }
 }
@@ -115,7 +115,7 @@ export function transformer<T>(object: T, trans: ITransformer): T {
     return new Transformer(object, trans).proxy() as T;
 }
 
-const argTrap = {
+const argHandler = {
     get(arg: Arg<any>, p: IKey) {
         return arg.get(p);
     },
@@ -174,7 +174,7 @@ export class Arg<T> {
         return this.fn(this.object);
     }
     proxy(): T {
-        if (!this.#proxy) this.#proxy = new Proxy(this, argTrap) as unknown as T;
+        if (!this.#proxy) this.#proxy = new Proxy(this, argHandler) as unknown as T;
         return this.#proxy;
     }
 }
@@ -210,7 +210,7 @@ export type IOp<T> = {
     [key in keyof T]?: T[key]
 }
 
-const redirectTrap = {
+const redirectHandler = {
     get(red: Redirect<any>, p: IKey) {
         return red.get(p);
     },
@@ -280,7 +280,7 @@ export class Redirect<T> {
         delete object[q];
     }
     proxy(): T {
-        if (!this.#proxy) this.#proxy = new Proxy(this, redirectTrap) as unknown as T;
+        if (!this.#proxy) this.#proxy = new Proxy(this, redirectHandler) as unknown as T;
         return this.#proxy;
     }
 }

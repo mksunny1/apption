@@ -4,7 +4,7 @@
  * @module
  */
 
-const selectorTrap = {
+const selectorHandler = {
     get<T extends Selector>(target: T, p: string | number | symbol) {
         return target.get(p)
     },
@@ -77,7 +77,7 @@ export class Selector {
         if (currentElement) currentElement.remove();
     }
     proxy() {
-        if (!this.#proxy) this.#proxy = new Proxy(this, selectorTrap);
+        if (!this.#proxy) this.#proxy = new Proxy(this, selectorHandler);
         return this.#proxy;
     }
 }
@@ -258,11 +258,11 @@ export class MethodSelector extends Selector {
         return super.get(key)?.[this.name](...args);
     }
     proxy() {
-        if (!this.#proxy) this.#proxy = new Proxy(this, methodSelectorTrap);
+        if (!this.#proxy) this.#proxy = new Proxy(this, methodSelectorHandler);
         return this.#proxy;
     }
 }
-const methodSelectorTrap = {
+const methodSelectorHandler = {
     get<T extends MethodSelector>(target: T, p: string | number | symbol) {
         return (...args: any) => target.call(p, ...args);
     }

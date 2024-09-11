@@ -1,4 +1,10 @@
 /**
+ * General app actions.
+ *
+ * @module
+ */
+type IKey = string | number | symbol;
+/**
  * Represents any function
  */
 interface ICallable {
@@ -38,7 +44,7 @@ type IConcreteOperation = ICallable | IOperations | Action;
 /**
  * An {@link IConcreteOperation} or a {@link Lazy} that returns one.
  */
-type IOperations = Array<IConcreteOperation | Lazy<IConcreteOperation>>;
+type IOperations = Iterable<IConcreteOperation | Lazy<IConcreteOperation>>;
 /**
  * An object mapping member keys to arrays of objects which can can be used as the `map` argument
  * of `call`, `set` or `del`. It may also be an instance of `Lazy` which resolves to any of these.
@@ -52,7 +58,7 @@ type IActionMapObject = {
  * An {@link IActionMapObject} or a {@link Lazy} that returns an {@link IActionMapObject}.
  *
  */
-type IActionMap = IActionMapObject | Lazy<IActionMapObject>;
+type IActionMap = ActionMap | IActionMapObject | Lazy<ActionMap | IActionMapObject>;
 /**
  * An object returned from a function (or `Action.act` implementation) which specifies our intent to
  * replace the propagated arguments with the new arguments list it is initialized with. This allows the
@@ -105,6 +111,27 @@ declare class Args {
  */
 declare function act(operations: IOperations, ...args: any[]): void | any[];
 /**
+ * ActionMap allows us to use iterables (of key-value pairs)  in place of
+ * objects in `call`, `set` and `del` functions (and corresponding classes).
+ * This can be useful for building virtual objects which are only used with
+ * the calls but never held fully in memory at any time, improving memory
+ * performance.
+ *
+ * @example
+ * import { call, ActionMap } from 'apption'
+ * let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
+ * const actions = new ActionMap([ 'push', [arr1, arr3]], ['unshift', [arr2]] ]);
+ * call(actions, 20, 21);
+ * console.log(arr1)   // [1, 2, 3, 20, 21]
+ * console.log(arr2)   // [20, 21, 1, 2, 3]
+ * console.log(arr3)   // [1, 2, 3, 20, 21]
+ *
+ */
+declare class ActionMap {
+    entries: Iterable<[IKey, any]>;
+    constructor(entries: Iterable<[IKey, any]>);
+}
+/**
  * Calls specified methods in multiple objects.
  *
  * If any array of objects (value) or object (value item) is of type {@link Lazy},
@@ -122,7 +149,7 @@ declare function act(operations: IOperations, ...args: any[]): void | any[];
  * @param map
  * @param args
  */
-declare function call(map: IActionMapObject, ...args: any[]): any[];
+declare function call(map: ActionMap | IActionMapObject, ...args: any[]): any[];
 /**
  * Sets specified properties in different objects.
  *
@@ -149,7 +176,7 @@ declare function call(map: IActionMapObject, ...args: any[]): any[];
  * @param map
  * @param value
  */
-declare function set(map: IActionMapObject, value: any): void;
+declare function set(map: ActionMap | IActionMapObject, value: any): void;
 /**
  * Deletes specified properties from different objects.
  * If an object or array of objects is {@link Lazy}, it will be called with the key first to obtain the
@@ -164,7 +191,7 @@ declare function set(map: IActionMapObject, value: any): void;
  *
  * @param map
  */
-declare function del(map: IActionMapObject): void;
+declare function del(map: ActionMap | IActionMapObject): void;
 /**
  * A wrapper around {@link act} to store the operations array. The operartions can be an instance
  * of {@link Lazy} so that it is computed every time {@link Action#act} is called.
@@ -258,4 +285,4 @@ declare class DelAction extends ObjectAction implements IAction<any[], any> {
     act(...args: any[]): void;
 }
 
-export { Action, Args, CallAction, DelAction, type IAction, type IActionMap, type IActionMapObject, type IConcreteOperation, type IOperations, Lazy, ObjectAction, SetAction, act, call, del, set };
+export { Action, ActionMap, Args, CallAction, DelAction, type IAction, type IActionMap, type IActionMapObject, type IConcreteOperation, type IOperations, Lazy, ObjectAction, SetAction, act, call, del, set };

@@ -1,4 +1,4 @@
-import { ICallable } from "./types";
+import { ICallable, IKey } from "./types";
 
 /**
  * Wraps a function that returns a real value to work with when an action is triggered. 
@@ -40,7 +40,7 @@ export type IConcreteOperation = ICallable | IOperations | Action;
 /**
  * An {@link IConcreteOperation} or a {@link Lazy} that returns one.
  */
-export type IOperations = Array<IConcreteOperation | Lazy<IConcreteOperation>> 
+export type IOperations = Iterable<IConcreteOperation | Lazy<IConcreteOperation>> 
 
 /**
  * An object mapping member keys to arrays of objects which can can be used as the `map` argument 
@@ -54,7 +54,7 @@ export type IActionMapObject = { [key: string | number]: any[] | Lazy<any[]> };
  * An {@link IActionMapObject} or a {@link Lazy} that returns an {@link IActionMapObject}.
  * 
  */
-export type IActionMap = IActionMapObject | Lazy<IActionMapObject>;
+export type IActionMap = ActionMap | IActionMapObject | Lazy<ActionMap | IActionMapObject>;
 
 /**
  * An object returned from a function (or `Action.act` implementation) which specifies our intent to 
@@ -114,13 +114,42 @@ export function act(operations: IOperations, ...args: any[]) {
     for (let operation of operations) {
         if (operation instanceof Lazy) operation = operation.value(...args);
 
-        if (operation instanceof Array) result = act(operation, ...args);
-        else if (operation instanceof Action) result = operation.act(...args);
-        else result = operation(...args);
+        if (operation instanceof Action) result = operation.act(...args);
+        else if (operation instanceof Function) result = operation(...args);
+        else result = act(operation, ...args);
 
         if (result instanceof Args) args = result.value;
     }
     return result;
+}
+
+/**
+ * ActionMap allows us to use iterables (of key-value pairs)  in place of 
+ * objects in `call`, `set` and `del` functions (and corresponding classes).
+ * This can be useful for building virtual objects which are only used with 
+ * the calls but never held fully in memory at any time, improving memory 
+ * performance.
+ * 
+ * @example
+ * import { call, ActionMap } from 'apption'
+ * let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
+ * const actions = new ActionMap([[ 'push', [arr1, arr3]], ['unshift', [arr2]]]);
+ * call(actions, 20, 21);
+ * console.log(arr1)   // [1, 2, 3, 20, 21]
+ * console.log(arr2)   // [20, 21, 1, 2, 3]
+ * console.log(arr3)   // [1, 2, 3, 20, 21]
+ * 
+ */
+export class ActionMap {
+    entries: Iterable<[IKey, any]>;
+    constructor(entries: Iterable<[IKey, any]>) {
+        this.entries = entries
+    }
+}
+
+function entries(map: ActionMap|IActionMapObject) {
+    if (map instanceof ActionMap) return map.entries;
+    else return Object.entries(map);
 }
 
 /**
@@ -141,9 +170,9 @@ export function act(operations: IOperations, ...args: any[]) {
  * @param map 
  * @param args 
  */
-export function call(map: IActionMapObject, ...args: any[]) {
+export function call(map: ActionMap|IActionMapObject, ...args: any[]) {
     let result: any[] | undefined, object: any;
-    for (let [key, objects] of Object.entries(map)) {
+    for (let [key, objects] of entries(map)) {
         if (objects instanceof Lazy) objects = objects.value(key, ...args);
         for (object of objects as any[]) {
             if (object instanceof Lazy) object = object.value(key, ...args);
@@ -180,9 +209,9 @@ export function call(map: IActionMapObject, ...args: any[]) {
  * @param map 
  * @param value 
  */
-export function set(map: IActionMapObject, value: any) {
+export function set(map: ActionMap|IActionMapObject, value: any) {
     let object: any;
-    for (let [key, objects] of Object.entries(map)) {
+    for (let [key, objects] of entries(map)) {
         if (objects instanceof Lazy) objects = objects.value(key, value);
         for (object of objects) {
             if (object instanceof Lazy) object = object.value(key, value);
@@ -206,10 +235,10 @@ export function set(map: IActionMapObject, value: any) {
  * 
  * @param map 
  */
-export function del(map: IActionMapObject) {
+export function del(map: ActionMap|IActionMapObject) {
     if (map instanceof Lazy) map = map.value();
     let object: any;
-    for (let [key, objects] of Object.entries(map)) {
+    for (let [key, objects] of entries(map)) {
         if (objects instanceof Lazy) objects = objects.value(key);
         for (object of objects) {
             if (object instanceof Lazy) object = object.value(key);
@@ -330,4 +359,3 @@ export class DelAction extends ObjectAction implements IAction<any[], any>  {
         del(this.map instanceof Lazy? this.map.value(...args): this.map);
     }
 }
-

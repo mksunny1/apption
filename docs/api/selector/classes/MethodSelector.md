@@ -53,7 +53,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:253](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L253)
+[selector.ts:253](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L253)
 
 ## Properties
 
@@ -63,7 +63,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:251](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L251)
+[selector.ts:251](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L251)
 
 ***
 
@@ -77,7 +77,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L46)
 
 ## Methods
 
@@ -97,7 +97,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:257](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L257)
+[selector.ts:257](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L257)
 
 ***
 
@@ -119,7 +119,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:75](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L75)
+[selector.ts:75](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L75)
 
 ***
 
@@ -141,7 +141,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:51](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L51)
+[selector.ts:51](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L51)
 
 ***
 
@@ -159,7 +159,7 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:260](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L260)
+[selector.ts:260](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L260)
 
 ***
 
@@ -183,4 +183,4 @@ console.log(document.querySelector('section'));  // null
 
 #### Defined in
 
-[selector.ts:68](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L68)
+[selector.ts:68](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L68)

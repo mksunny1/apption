@@ -18,8 +18,8 @@ which are flexible, clean, well structured, fast, memory-efficient, easy to unde
 #### ES Modules
 
 ```js
-import { call, ArrayActions, ChildrenActions, redirect } from 'apption';
-import { call } from 'apption/action';
+import { Lazy, set, call, ArrayActions, ChildrenActions, redirect } from 'apption';
+import { Lazy, set, call } from 'apption/action';
 ```
 
 #### CommonJS
@@ -32,7 +32,7 @@ const array = require('apption/array');
 #### Directly from a CDN
 
 ```js
-import { call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action/esm/action.min.js';
+import { Lazy, set, call } from 'https://cdn.jsdelivr.net/npm/apption/dist/action/esm/action.min.js';
 import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/apption/dist/array/esm/array.min.js';
 ```
 
@@ -40,6 +40,21 @@ import { ArrayActions, ChildrenActions } from 'https://cdn.jsdelivr.net/npm/appt
 ## Usage
 
 ```js
+const obj1 = { a: 1, b: 2, c: 3 }, obj2 = { a: 1, b: 2, c: 3 };
+const actions = {
+    a: [obj1], 
+    b: [obj2], 
+    c: [obj1]
+};
+
+set(actions, 20);
+console.log(obj1);    // { a: 20, b: 2, c: 20}
+console.log(obj2);    // { a: 1, b: 20, c: 3}
+
+set(actions, new Lazy((key, val) => val * 2));
+console.log(obj1)     // { a: 40, b: 2, c: 40}
+console.log(obj2)     // { a: 1, b: 40, c: 3}
+
 const array = [];
 const tbody = document.querySelector('tbody'), row = document.querySelector('template').content.firstElementChild;
 const rowId = row.querySelector('td'), rowlbl = row.querySelector('a');

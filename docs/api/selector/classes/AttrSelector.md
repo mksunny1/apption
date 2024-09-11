@@ -53,7 +53,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:133](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L133)
+[selector.ts:133](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L133)
 
 ## Properties
 
@@ -67,7 +67,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:132](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L132)
+[selector.ts:132](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L132)
 
 ***
 
@@ -81,7 +81,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:46](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L46)
+[selector.ts:46](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L46)
 
 ## Methods
 
@@ -103,7 +103,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:200](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L200)
+[selector.ts:200](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L200)
 
 ***
 
@@ -125,7 +125,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:194](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L194)
+[selector.ts:194](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L194)
 
 ***
 
@@ -143,7 +143,7 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:79](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L79)
+[selector.ts:79](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L79)
 
 ***
 
@@ -167,4 +167,4 @@ console.log(slct.get('p'));  // main
 
 #### Defined in
 
-[selector.ts:197](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/selector.ts#L197)
+[selector.ts:197](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/selector.ts#L197)

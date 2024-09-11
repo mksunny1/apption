@@ -19,7 +19,7 @@ and previous value for each object to compute the new value to be set.
 
 ## Parameters
 
-• **map**: [`IActionMapObject`](../type-aliases/IActionMapObject.md)
+• **map**: [`IActionMapObject`](../type-aliases/IActionMapObject.md) \| [`ActionMap`](../classes/ActionMap.md)
 
 • **value**: `any`
 
@@ -44,4 +44,4 @@ console.log(obj2);    // { a: 1, b: 40, c: 3}
 
 ## Defined in
 
-[action.ts:183](https://github.com/mksunny1/apption/blob/5c2ed0c98e500fcbd7087b8148508efe1896c020/src/action.ts#L183)
+[action.ts:212](https://github.com/mksunny1/apption/blob/15875259b0a0fd5aee4cca9a9f9a7e7aa83be5d0/src/action.ts#L212)

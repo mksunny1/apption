@@ -3,7 +3,7 @@
  *
  * @module
  */
-const selectorTrap = {
+const selectorHandler = {
     get(target, p) {
         return target.get(p);
     },
@@ -81,7 +81,7 @@ class Selector {
     }
     proxy() {
         if (!this.#proxy)
-            this.#proxy = new Proxy(this, selectorTrap);
+            this.#proxy = new Proxy(this, selectorHandler);
         return this.#proxy;
     }
 }
@@ -256,11 +256,11 @@ class MethodSelector extends Selector {
     }
     proxy() {
         if (!this.#proxy)
-            this.#proxy = new Proxy(this, methodSelectorTrap);
+            this.#proxy = new Proxy(this, methodSelectorHandler);
         return this.#proxy;
     }
 }
-const methodSelectorTrap = {
+const methodSelectorHandler = {
     get(target, p) {
         return (...args) => target.call(p, ...args);
     }

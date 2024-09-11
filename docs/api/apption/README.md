@@ -14,6 +14,12 @@ Re-exports [Action](../action/classes/Action.md)
 
 ***
 
+### ActionMap
+
+Re-exports [ActionMap](../action/classes/ActionMap.md)
+
+***
+
 ### Arg
 
 Re-exports [Arg](../middleware/classes/Arg.md)

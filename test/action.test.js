@@ -1,7 +1,7 @@
 
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { act, call, set, del, Action, CallAction, SetAction, DelAction, Lazy, Args } from '../src/action.js'
+import { act, call, set, del, Action, CallAction, SetAction, DelAction, Lazy, Args, ActionMap } from '../src/action.js'
 
 
 describe('action.act', async t1 => {
@@ -25,7 +25,7 @@ describe('action.act', async t1 => {
         assert.equal(count, 63);
     });
 
-    await it('Should replace the args when an instance of Result is returned by any function ', async t2 => {
+    await it('Should replace the args when an instance of Args is returned by any function ', async t2 => {
         let count = 0;
         act([
             (a1, a2) => count += a1,
@@ -67,8 +67,23 @@ describe('action.call', async t1 => {
         assert.deepEqual(arr2, [20, 21, 1, 2, 3]);
     });
 
-    await it('Should replace the args when an instance of Result is returned by any method ', async t2 => {
-        
+    await it('Should replace the args when an instance of Args is returned by any method ', async t2 => {
+        let count = 0;
+        call({
+            a: [{ a: (a1, a2) => count += a1 }],
+            b: [{ b: (a1, a2) => new Args([count += a2, 0]) }],
+            c: [{ c: (a1, a2) => count += a2 + 1 }]
+        }, 20, 21);
+        assert.equal(count, 42);
+    });
+
+    await it('Should allow us to use `ActionMaps` in place of objects', async t2 => {
+        let arr1 = [1, 2, 3], arr2 = [1, 2, 3], arr3 = [1, 2, 3];
+        const actions = new ActionMap([[ 'push', [arr1, arr3]], ['unshift', [arr2]]]);
+        call(actions, 20, 21);
+        console.log(arr1)   // [1, 2, 3, 20, 21]
+        console.log(arr2)   // [20, 21, 1, 2, 3]
+        console.log(arr3)   // [1, 2, 3, 20, 21]
     });
 
     await it('Should resolve `Lazy` values', async t2 => {

@@ -5,7 +5,7 @@
  *
  * @module
  */
-const transformerTrap = {
+const transformerHandler = {
     get(transformer, p) {
         return transformer.get(p);
     },
@@ -61,7 +61,7 @@ class Transformer {
     }
     proxy() {
         if (!this.#proxy)
-            this.#proxy = new Proxy(this, transformerTrap);
+            this.#proxy = new Proxy(this, transformerHandler);
         return this.#proxy;
     }
 }
@@ -84,7 +84,7 @@ class Transformer {
 function transformer(object, trans) {
     return new Transformer(object, trans).proxy();
 }
-const argTrap = {
+const argHandler = {
     get(arg, p) {
         return arg.get(p);
     },
@@ -141,7 +141,7 @@ class Arg {
     }
     proxy() {
         if (!this.#proxy)
-            this.#proxy = new Proxy(this, argTrap);
+            this.#proxy = new Proxy(this, argHandler);
         return this.#proxy;
     }
 }
@@ -167,7 +167,7 @@ class Arg {
 function arg(object, fn) {
     return new Arg(object, fn).proxy();
 }
-const redirectTrap = {
+const redirectHandler = {
     get(red, p) {
         return red.get(p);
     },
@@ -239,7 +239,7 @@ class Redirect {
     }
     proxy() {
         if (!this.#proxy)
-            this.#proxy = new Proxy(this, redirectTrap);
+            this.#proxy = new Proxy(this, redirectHandler);
         return this.#proxy;
     }
 }
